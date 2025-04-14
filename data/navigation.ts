@@ -73,7 +73,8 @@ export const navigationItems = [
   export const contactInfo = {
     address: "Dubai, UAE",
     hours: "9:00 - 18:00, Mon - Fri, Sat - 9:30 - 16:00",
-    phone: "+971564129562"
+    phone: "+971564129562",
+    email: "sales@spexaelectrical.com"
   };
 
  

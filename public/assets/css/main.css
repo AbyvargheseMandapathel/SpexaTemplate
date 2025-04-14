@@ -14616,6 +14616,7 @@ h6 {
 	background-position: top center;
 }
 
+
 .footer-style-6 .section-footer {
 	padding-top: 300px;
 }
@@ -14657,6 +14658,57 @@ h6 {
 }
 
 .footer-style-6 .footer-bottom {
+	border-top: 1px solid rgba(0, 117, 220, 0.1529411765);
+}
+
+.footer-style-modern {
+	margin-top: 10px;
+	background-image: url(../imgs/pages/home7/bg-footer.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.footer-style-modern .section-footer {
+	padding-top: 50px;
+}
+
+.footer-style-modern .hover-effect {
+	margin-bottom: 12px;
+	color: rgba(255, 255, 255, 0.7058823529);
+}
+
+.footer-style-modern .hover-effect svg {
+	fill: var(--tc-primary-1000);
+	margin-right: 15px;
+	margin-top: -2px;
+}
+
+.footer-style-modern .hover-effect:after {
+	display: none;
+}
+
+.footer-style-modern .hover-effect:hover {
+	padding-left: 5px;
+	color: var(--tc-primary-1000) !important;
+	padding-right: 0px;
+}
+
+.footer-style-modern .text-footer {
+	padding-right: 74px;
+	position: relative;
+}
+
+.footer-style-modern .text-footer::before {
+	content: "";
+	position: absolute;
+	top: 47%;
+	right: 0px;
+	width: 54px;
+	height: 1px;
+	background-color: var(--tc-primary-1000);
+}
+
+.footer-style-modern .footer-bottom {
 	border-top: 1px solid rgba(0, 117, 220, 0.1529411765);
 }
 

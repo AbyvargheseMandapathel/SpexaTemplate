@@ -103,11 +103,11 @@ export default function Footer4() {
 							<div className="footer-bottom">
 								<div className="row paragraph-base">
 									<div className="col">
-										<div className="small secondery-600">Copyright © Vatech {new Date().getFullYear()} . Alright Reserved.</div>
+										<div className="small secondery-600">Copyright © Spexa {new Date().getFullYear()} . Alright Reserved.</div>
 									</div>
-									<div className="col d-flex justify-content-end">
+									{/* <div className="col d-flex justify-content-end">
 										<p className="secondery-600">Designed By <Link className="text-primary" href="https://alithemes.com" target="_blank">Alithemes</Link></p>
-									</div>
+									</div> */}
 								</div>
 							</div>
 						</div>

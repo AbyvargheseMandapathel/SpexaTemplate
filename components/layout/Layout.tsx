@@ -38,6 +38,7 @@ import Header8 from './header/Header8'
 import Header9 from './header/Header9'
 import Offcanvas from './Offcanvas'
 import Search from './Search'
+import FooterModern from './footer/FooterModern'
 
 interface LayoutProps {
 	headerStyle?: Number
@@ -126,6 +127,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 			{footerStyle == 14 ? < Footer14 /> : null}
 			{footerStyle == 15 ? < Footer15 /> : null}
 			{footerStyle == 16 ? < Footer16 /> : null}
+			{footerStyle == 17 ? < FooterModern /> : null}
 
 			<BackToTop target="#top" />
 		</>

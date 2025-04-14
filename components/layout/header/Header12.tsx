@@ -79,9 +79,9 @@ export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handl
           <div className="d-flex align-items-center">
             <button onClick={handleMobileMenu} className="menu-tigger btn-navbar rounded-circle px-2 ms-4 d-flex align-items-center justify-content-center btn-menu d-lg-none d-inline-block">
               <svg width={30} height={24} viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1={12} x2={30} y2={12} stroke="currentColor" strokeWidth={3} />
-                <path d="M5 22H30" stroke="currentColor" strokeWidth={3} />
-                <path d="M10 2H30" stroke="currentColor" strokeWidth={3} />
+                <line y1={12} x2={30} y2={12} stroke="#020e98" strokeWidth={3} />
+                <path d="M5 22H30" stroke="#020e98" strokeWidth={3} />
+                <path d="M10 2H30" stroke="#020e98" strokeWidth={3} />
               </svg>
             </button>
             {/* <Link href="#" className="btn btn-primary-500-rounded d-none d-lg-inline-block">
@@ -105,11 +105,11 @@ export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handl
       {/* Mobile menu with fixed keys */}
       <div className="offCanvas__info">
         <div className="offCanvas__close-icon menu-close">
-          <button>
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width={100} height={100} viewBox="0 0 24 24">
-              <path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z" />
-            </svg>
-          </button>
+		<button>
+			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width={100} height={100} viewBox="0 0 24 24" fill="#020e98">
+			<path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z" />
+			</svg>
+		</button>
         </div>
         <div className="offCanvas__logo mb-20">
           <Link href="/"><img src="/assets/imgs/template/spexa-logo.png" alt="Logo" style={{ maxHeight: '45px', width: 'auto' }} /></Link>

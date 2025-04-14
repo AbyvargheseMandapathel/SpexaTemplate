@@ -11,8 +11,8 @@ export default function Section2() {
 					<div className="row position-relative align-items-center">
 						<div className="col-lg-6 position-relative">
 							<p className="sub-heading-ag-sm text-uppercase text-line-up-down white letter-space-4 color-white mb-3">About US</p>
-							<h3 className="heading-ag-3xl color-white mb-3">Investing for your Future <br /><span className="text-underline red-under">Business growth</span></h3>
-							<p className="paragraph-rubik-r gray-100">Muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor los pasajes.</p>
+							<h3 className="heading-ag-3xl color-white mb-3">Your Trusted Partner in <br /><span className="text-underline red-under">Explosion-Proof Solutions</span></h3>
+							<p className="paragraph-rubik-r gray-100">Spexa Electricals is a trusted provider of a comprehensive selection of explosion-proof products and services, catering to the specific needs of the oil and gas industry.</p>
 							<ul className="list-tick-col list-tick-col-w">
 								<li>
 									<svg width={20} height={20} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +25,7 @@ export default function Section2() {
 											</clipPath>
 										</defs>
 									</svg>
-									Unlimited Consultation until getting result
+									ISO 9001:2008 Certified Company
 								</li>
 								<li>
 									<svg width={20} height={20} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,7 @@ export default function Section2() {
 											</clipPath>
 										</defs>
 									</svg>
-									Free demo Consultation
+									Industry-Leading Expertise
 								</li>
 								<li>
 									<svg width={20} height={20} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +51,7 @@ export default function Section2() {
 											</clipPath>
 										</defs>
 									</svg>
-									100% Moneyback Guarantee
+									Custom Solutions for Oil & Gas Industry
 								</li>
 							</ul>
 							<Link href="#" className="btn btn-primary-home none-bd bdrd-10">
@@ -62,15 +62,15 @@ export default function Section2() {
 						<div className="col-lg-6">
 							<div className="box-images-about">
 								<div className="images-about-1">
-									<img src="/assets/imgs/pages/home12/about.png" className="w-100" alt="Vatech" />
-									<img src="/assets/imgs/pages/home12/about2.png" className="w-100" alt="Vatech" />
+									<img src="/assets/imgs/pages/home12/1.png" className="w-100" alt="Vatech" />
+									<img src="/assets/imgs/pages/home12/2.png" className="w-100" alt="Vatech" />
 								</div>
 								<div className="images-about-2">
 									<div className="text-top-about">
-										<h2 className="heading-3xl color-white"><CountUp className="odometer" enableScrollSpy={true} end={25} /><span className="d-inline-block align-middle">+</span></h2>
+										<h2 className="heading-3xl color-white"><CountUp className="odometer" enableScrollSpy={true} end={10} /><span className="d-inline-block align-middle">+</span></h2>
 										<p className="mb-0 button-ag-sm color-white">Years of Experiences</p>
 									</div>
-									<img src="/assets/imgs/pages/home12/about3.png" className="w-100" alt="Vatech" />
+									<img src="/assets/imgs/pages/home12/3.png" className="w-100" alt="Vatech" />
 								</div>
 							</div>
 						</div>
