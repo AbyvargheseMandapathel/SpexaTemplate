@@ -1,10 +1,33 @@
 import Link from 'next/link'
 import { navigationItems, mobileNavigationItems } from '../../../data/navigation'
 
-export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handleSearch, isSearch }: any) {
-  // Helper function to generate stable keys for menu items
-  const generateKey = (prefix: string, item: { id?: string, title: string, link: string, type?: string, children?: any[] }) => {
-    return item.id ? `${prefix}-${item.id}` : `${prefix}-${item.title.toLowerCase().replace(/\s+/g, '-')}-${item.link}`
+// Define types for navigation items
+type NavigationItem = {
+  id?: string
+  title: string
+  link: string
+  type?: 'link' | 'dropdown' | 'mega-menu'
+  children?: NavigationItem[] | MegaMenuColumn[]
+}
+
+type MegaMenuColumn = {
+  title: string
+  items: NavigationItem[]
+}
+
+interface HeaderProps {
+  scroll?: boolean
+  isMobileMenu?: boolean
+  handleMobileMenu?: () => void
+  handleSearch?: () => void
+  isSearch?: boolean
+}
+
+export default function Header12({ scroll, handleMobileMenu }: HeaderProps) {
+  // Helper function with proper typing
+  const generateKey = (prefix: string, item: NavigationItem | MegaMenuColumn) => {
+    if ('id' in item) return `${prefix}-${item.id}`
+    return `${prefix}-${item.title.toLowerCase().replace(/\s+/g, '-')}`
   }
 
   return (
@@ -17,7 +40,11 @@ export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handl
           
           <ul className="navbar-nav gap-1 align-items-lg-center m-auto">
             {navigationItems.map((item) => {
-              const itemKey = generateKey('nav', item)
+              const itemKey = generateKey('nav', { 
+                ...item, 
+                id: item.id?.toString(),
+                type: item.type as 'link' | 'dropdown' | 'mega-menu' | undefined 
+              })
               return (
                 <li key={itemKey} className={`nav-item ${item.type !== 'link' ? 'dropdown menu-item-has-children' : ''}`}>
                   <Link 
@@ -32,7 +59,7 @@ export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handl
                   
                   {item.type === 'dropdown' && item.children && (
                     <ul className="dropdown-menu">
-                      {item.children.map((subItem) => {
+                      {(item.children as NavigationItem[]).map((subItem) => {
                         const subItemKey = generateKey('subnav', subItem)
                         return (
                           <li key={subItemKey}>
@@ -48,7 +75,7 @@ export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handl
                   {item.type === 'mega-menu' && item.children && (
                     <div className="mega-menu">
                       <div className="row">
-                        {item.children.map((column) => {
+                        {(item.children as unknown as MegaMenuColumn[]).map((column) => {
                           const columnKey = generateKey('col', column)
                           return (
                             <div key={columnKey} className="col-6">
@@ -75,7 +102,6 @@ export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handl
             })}
           </ul>
 
-          {/* Rest of your header content remains the same */}
           <div className="d-flex align-items-center">
             <button onClick={handleMobileMenu} className="menu-tigger btn-navbar rounded-circle px-2 ms-4 d-flex align-items-center justify-content-center btn-menu d-lg-none d-inline-block">
               <svg width={30} height={24} viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,9 +110,6 @@ export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handl
                 <path d="M10 2H30" stroke="#020e98" strokeWidth={3} />
               </svg>
             </button>
-            {/* <Link href="#" className="btn btn-primary-500-rounded d-none d-lg-inline-block">
-              Learn More
-            </Link> */}
             <div className="header-need-help">
               <div className="icon-phone">
                 <svg width={17} height={18} viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,14 +125,14 @@ export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handl
         </div>
       </nav>
 
-      {/* Mobile menu with fixed keys */}
+      {/* Mobile menu */}
       <div className="offCanvas__info">
         <div className="offCanvas__close-icon menu-close">
-		<button>
-			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width={100} height={100} viewBox="0 0 24 24" fill="#020e98">
-			<path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z" />
-			</svg>
-		</button>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width={100} height={100} viewBox="0 0 24 24" fill="#020e98">
+              <path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z" />
+            </svg>
+          </button>
         </div>
         <div className="offCanvas__logo mb-20">
           <Link href="/"><img src="/assets/imgs/template/spexa-logo.png" alt="Logo" style={{ maxHeight: '45px', width: 'auto' }} /></Link>
@@ -117,7 +140,11 @@ export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handl
         <div className="offCanvas__side-info mb-30">
           <ul className="navbar-nav navbar-nav-mobile">
             {mobileNavigationItems.map((item) => {
-              const mobileItemKey = generateKey('mobnav', item)
+              const mobileItemKey = generateKey('mobnav', { 
+                ...item, 
+                id: item.id?.toString(),
+                type: item.type as 'link' | 'dropdown' | 'mega-menu' | undefined
+              })
               return (
                 <li key={mobileItemKey} className={`nav-item ${item.type !== 'link' ? 'dropdown menu-item-has-children' : ''}`}>
                   <Link 
@@ -131,18 +158,16 @@ export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handl
                   </Link>
                   {(item.type === 'dropdown' || item.type === 'mega-menu') && item.children && (
                     <ul className="dropdown-menu">
-                      {(item.type === 'mega-menu' 
-                        ? [...item.children[0].items, ...item.children[1].items] 
-                        : item.children).map((subItem) => {
-                          const mobileSubItemKey = generateKey('mobsub', subItem)
-                          return (
-                            <li key={mobileSubItemKey}>
-                              <Link className="dropdown-item" href={subItem.link}>
-                                {subItem.title}
-                              </Link>
-                            </li>
-                          )
-                        })}
+                      {(item.children as NavigationItem[]).map((subItem) => {
+                        const mobileSubItemKey = generateKey('mobsub', subItem)
+                        return (
+                          <li key={mobileSubItemKey}>
+                            <Link className="dropdown-item" href={subItem.link}>
+                              {subItem.title}
+                            </Link>
+                          </li>
+                        )
+                      })}
                     </ul>
                   )}
                 </li>
@@ -150,7 +175,6 @@ export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handl
             })}
           </ul>
         </div>
-        {/* Rest of your mobile menu content */}
       </div>
       <div className="offCanvas__overly" />
     </header>
