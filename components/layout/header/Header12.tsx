@@ -3,7 +3,7 @@ import { navigationItems, mobileNavigationItems } from '../../../data/navigation
 
 export default function Header12({ scroll, isMobileMenu, handleMobileMenu, handleSearch, isSearch }: any) {
   // Helper function to generate stable keys for menu items
-  const generateKey = (prefix: string, item: { id?: string, title: string, link: string }) => {
+  const generateKey = (prefix: string, item: { id?: string, title: string, link: string, type?: string, children?: any[] }) => {
     return item.id ? `${prefix}-${item.id}` : `${prefix}-${item.title.toLowerCase().replace(/\s+/g, '-')}-${item.link}`
   }
 

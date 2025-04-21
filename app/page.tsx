@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout"
-import Section1 from '@/components/sections/home12/Section1'
+import Section1 from '@/components/sections/home4/Section1'
 import Section10 from '@/components/sections/home12/Section10'
 import Section2 from '@/components/sections/home12/Section2'
 import Section3 from '@/components/sections/home12/Section3'
@@ -10,12 +10,15 @@ import Client from '@/components/sections/home12/Client'
 import Section7 from '@/components/sections/home12/Section7'
 import Section8 from '@/components/sections/home12/Section8'
 import Section9 from '@/components/sections/home12/Section9'
+import CarouselSection1 from "@/components/sections/home12/CarouselSection1"
+import CarouselSection2 from "@/components/sections/home12/CarouselSection2"
 export default function Home12() {
 
 	return (
 		<>
 
 			<Layout headerStyle={12} footerStyle={17}>
+				{/* <CarouselSection2 /> */}
 				<Section1 />
 				<Section2 />
 				<Client />
