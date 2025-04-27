@@ -4,49 +4,56 @@ import { useState, useEffect } from 'react'
 import ModalVideo from 'react-modal-video'
 import { motion, AnimatePresence } from 'framer-motion'
 
+// Content data in JSON format for each slide
+const slideContent = [
+	{
+		heading: "Premium Explosion-Proof Products",
+		description: "Spexa Electricals offers high-quality explosion-proof products, ensuring safety, reliability, and compliance for the oil and gas industry with cutting-edge technology and expert craftsmanship.",
+		backgroundImage: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-1-67d12caced734.webp",
+		imageSrc: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-3-2-1-67d130542f3f8.webp",
+		buttonText: "View Products",
+		buttonLink: "#products"
+	},
+	{
+		heading: "Expert Explosion-Proof Solutions",
+		description: "Spexa Electricals delivers reliable explosion-proof services, ensuring safety, compliance, and efficiency for the oil and gas industry with expert support and innovative solutions.",
+		backgroundImage: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-2-67d12cad16ec0.webp",
+		imageSrc: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-1-67d12caced734.webp",
+		buttonText: "Explore Solutions",
+		buttonLink: "#solutions"
+	},
+	{
+		heading: "Excellence in Explosion-Proof Projects",
+		description: "Spexa Electricals delivers high-quality explosion-proof projects, ensuring safety, reliability, and compliance for the oil and gas industry with innovative solutions and expert execution.",
+		backgroundImage: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-3-2-1-67d130542f3f8.webp",
+		imageSrc: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-2-67d12cad16ec0.webp",
+		buttonText: "See Projects",
+		buttonLink: "#projects"
+	}
+]
+
 export default function Section1() {
 	const [isOpen, setOpen] = useState(false)
 	const [currentHeadingIndex, setCurrentHeadingIndex] = useState(0)
-	const [currentBgIndex, setCurrentBgIndex] = useState(0)
 	
-	// Array of headings to cycle through
-	const headings = [
-		"Premium Explosion-Proof Products",
-		"Expert Explosion-Proof Solutions",
-		"Excellence in Explosion-Proof Projects",
-	]
-	
-	// Array of background images to cycle through
-	const backgroundImages = [
-		"https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-1-67d12caced734.webp",
-		"https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-2-67d12cad16ec0.webp",
-		"https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-3-2-1-67d130542f3f8.webp"
-	]
-	
-	// Effect to change heading every 5 seconds (slowed down from 3 seconds)
+	// Effect to change content every 5 seconds
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setCurrentHeadingIndex(prev => (prev + 1) % headings.length)
+			setCurrentHeadingIndex(prev => (prev + 1) % slideContent.length)
 		}, 5000)
 		
 		return () => clearInterval(interval)
 	}, [])
 	
-	// Effect to change background image every 5 seconds (slowed down from 3 seconds)
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setCurrentBgIndex(prev => (prev + 1) % backgroundImages.length)
-		}, 5000)
-		
-		return () => clearInterval(interval)
-	}, [])
+	// Get current slide content
+	const currentSlide = slideContent[currentHeadingIndex]
 	
 	return (
 		<>
 			<section 
 				className="position-relative overflow-hidden box-banner-4"
 				style={{
-					backgroundImage: `url(${backgroundImages[currentBgIndex]})`,
+					backgroundImage: `url(${currentSlide.backgroundImage})`,
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
 					transition: 'background-image 1s ease-in-out',
@@ -77,7 +84,7 @@ export default function Section1() {
 											transition={{ duration: 0.5 }}
 											className="display-xl color-white mb-30"
 										>
-											{headings[currentHeadingIndex].split(' ').map((word, i) => (
+											{currentSlide.heading.split(' ').map((word, i) => (
 												<motion.span
 													key={i}
 													initial={{ opacity: 0 }}
@@ -93,10 +100,7 @@ export default function Section1() {
 								</div>
 								
 								<p className="paragraph-rubik-r color-white desc-banner mb-40" data-aos="fade-up">
-									{currentHeadingIndex === 3 ? 
-										"Providing industry-leading electrical safety equipment and solutions to protect your workforce and ensure compliance with safety standards." : 
-										"We have been operating for over a decade, providing top-notch services to our clients and building a strong track record"
-									}
+									{currentSlide.description}
 								</p>
 								<div className="d-flex align-items-center" data-aos="fade-up">
 									<Link href="#" className="btn btn-primary-square-2-md">
@@ -104,11 +108,9 @@ export default function Section1() {
 										<img src="/assets/imgs/template/icons/plus-sm.svg" alt="Vatech" />
 									</Link>
 									
-									{currentHeadingIndex === 3 && (
-										<Link href="#safety-equipment" className="btn btn-outline-light ms-3">
-											View Safety Equipment
-										</Link>
-									)}
+									<Link href={currentSlide.buttonLink} className="btn btn-outline-light ms-3">
+										{currentSlide.buttonText}
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -121,8 +123,8 @@ export default function Section1() {
 								transition={{ duration: 0.7, type: "spring", bounce: 0.3 }}
 							>
 								<motion.img 
-									src={`/assets/imgs/pages/home4/banner.png`}
-									alt="Spexa Explosion-Proof Solutions" 
+									src={currentSlide.imageSrc}
+									alt={`Spexa ${currentSlide.heading}`}
 									className="featured-image"
 									initial={{ filter: "brightness(0.8)" }}
 									animate={{ 
@@ -133,6 +135,7 @@ export default function Section1() {
 										filter: { duration: 1 },
 										y: { repeat: Infinity, duration: 3, ease: "easeInOut" }
 									}}
+									key={currentHeadingIndex}
 								/>
 								<div className="image-highlight"></div>
 							</motion.div>
