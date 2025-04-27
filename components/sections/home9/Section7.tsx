@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react"
 import Link from "next/link"
 import { sliderGroup3Tab } from '@/util/swiperOptions'
@@ -9,14 +9,31 @@ export default function Section7() {
     const handleTab = (i: number) => {
         setIsTab(i)
     }
+    
+    // Add useEffect to safely initialize client-side animations
+    useEffect(() => {
+        // This ensures WOW animations only run on the client side
+        if (typeof window !== 'undefined') {
+            try {
+                // Correct way to initialize WOW.js
+                const WOW = require('wow.js');
+                const wow = new WOW({
+                    live: false
+                });
+                wow.init();
+            } catch (error) {
+                console.error("Error initializing WOW.js:", error);
+            }
+        }
+    }, []);
+    
 	return (
 		<>
-
-			<section className="position-relative overflow-hidden box-latest-projects-9">
+			<section className="position-relative overflow-hidden box-latest-projects-9" style={{backgroundColor: 'rgb(14, 48, 68)', padding: '80px 0'}}>
 				<div className="container swiper-root position-relative" data-aos="fade-up">
 					<div className="row position-relative align-items-end">
 						<div className="col-lg-9 mb-4 text-center text-lg-start">
-							<h6 className="text-border-square mb-20 text-uppercase">Latest project</h6>
+							<h6 className="text-border-square mb-20 text-uppercase" style={{color: '#1CBBB4'}}>Latest project</h6>
 							<h3 className="heading-48-fitree color-white">
 								We Have Complete<br className="d-none d-lg-block" />
 								1000+ Project Here
@@ -222,6 +239,38 @@ export default function Section7() {
 													</div>
 												</div>
 											</SwiperSlide>
+											<SwiperSlide>
+												<div className="card-project-4">
+													<div className="card-image">
+														<img src="/assets/imgs/pages/home9/project2.png" alt="Vatech" />
+													</div>
+													<div className="card-info">
+														<h6 className="heading-24-fitree-bold">Software Development</h6>
+														<Link href="#" className="link-more">
+															<svg width={15} height={14} viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M8.00005 13C8.00005 13 14 8.58107 14 6.99995C14 5.41884 8 1 8 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+																<path d="M1.00005 13C1.00005 13 6.99999 8.58107 7 6.99995C7.00001 5.41884 1 1 1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+															</svg>
+														</Link>
+													</div>
+												</div>
+											</SwiperSlide>
+											<SwiperSlide>
+												<div className="card-project-4">
+													<div className="card-image">
+														<img src="/assets/imgs/pages/home9/project3.png" alt="Vatech" />
+													</div>
+													<div className="card-info">
+														<h6 className="heading-24-fitree-bold">Software Development</h6>
+														<Link href="#" className="link-more">
+															<svg width={15} height={14} viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M8.00005 13C8.00005 13 14 8.58107 14 6.99995C14 5.41884 8 1 8 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+																<path d="M1.00005 13C1.00005 13 6.99999 8.58107 7 6.99995C7.00001 5.41884 1 1 1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+															</svg>
+														</Link>
+													</div>
+												</div>
+											</SwiperSlide>
 										</div>
 									</Swiper>
 								</div>
@@ -266,6 +315,38 @@ export default function Section7() {
 												<div className="card-project-4">
 													<div className="card-image">
 														<img src="/assets/imgs/pages/home9/project4.png" alt="Vatech" />
+													</div>
+													<div className="card-info">
+														<h6 className="heading-24-fitree-bold">Software Development</h6>
+														<Link href="#" className="link-more">
+															<svg width={15} height={14} viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M8.00005 13C8.00005 13 14 8.58107 14 6.99995C14 5.41884 8 1 8 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+																<path d="M1.00005 13C1.00005 13 6.99999 8.58107 7 6.99995C7.00001 5.41884 1 1 1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+															</svg>
+														</Link>
+													</div>
+												</div>
+											</SwiperSlide>
+											<SwiperSlide>
+												<div className="card-project-4">
+													<div className="card-image">
+														<img src="/assets/imgs/pages/home9/project3.png" alt="Vatech" />
+													</div>
+													<div className="card-info">
+														<h6 className="heading-24-fitree-bold">Software Development</h6>
+														<Link href="#" className="link-more">
+															<svg width={15} height={14} viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M8.00005 13C8.00005 13 14 8.58107 14 6.99995C14 5.41884 8 1 8 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+																<path d="M1.00005 13C1.00005 13 6.99999 8.58107 7 6.99995C7.00001 5.41884 1 1 1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+															</svg>
+														</Link>
+													</div>
+												</div>
+											</SwiperSlide>
+											<SwiperSlide>
+												<div className="card-project-4">
+													<div className="card-image">
+														<img src="/assets/imgs/pages/home9/project2.png" alt="Vatech" />
 													</div>
 													<div className="card-info">
 														<h6 className="heading-24-fitree-bold">Software Development</h6>
@@ -386,6 +467,22 @@ export default function Section7() {
 												<div className="card-project-4">
 													<div className="card-image">
 														<img src="/assets/imgs/pages/home9/project3.png" alt="Vatech" />
+													</div>
+													<div className="card-info">
+														<h6 className="heading-24-fitree-bold">Software Development</h6>
+														<Link href="#" className="link-more">
+															<svg width={15} height={14} viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M8.00005 13C8.00005 13 14 8.58107 14 6.99995C14 5.41884 8 1 8 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+																<path d="M1.00005 13C1.00005 13 6.99999 8.58107 7 6.99995C7.00001 5.41884 1 1 1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+															</svg>
+														</Link>
+													</div>
+												</div>
+											</SwiperSlide>
+											<SwiperSlide>
+												<div className="card-project-4">
+													<div className="card-image">
+														<img src="/assets/imgs/pages/home9/project2.png" alt="Vatech" />
 													</div>
 													<div className="card-info">
 														<h6 className="heading-24-fitree-bold">Software Development</h6>

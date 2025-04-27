@@ -40,6 +40,7 @@ import Offcanvas from './Offcanvas'
 import Search from './Search'
 import FooterModern from './footer/FooterModern'
 
+
 interface LayoutProps {
 	headerStyle?: Number
 	footerStyle?: Number
@@ -58,16 +59,24 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 	const handleSearch = (): void => setSearch(!isSearch)
 
 	useEffect(() => {
-		const WOW: any = require('wowjs');
-		(window as any).wow = new WOW.WOW({
-			live: false
-		});
+		// Initialize AOS
+		AOS.init({ once: true });
+		
+		// Initialize WOW.js safely with dynamic import
+		if (typeof window !== 'undefined') {
+			// Use dynamic import for WOW.js to avoid SSR issues
+			import('wow.js').then((WOWModule: { default: any }) => {
+			  const WOW = WOWModule.default || WOWModule;
+			  const wow = new WOW({
+			    live: false
+			  });
+			  wow.init();
+			}).catch(err => {
+			  console.error('Error loading WOW.js:', err);
+			});
+		}
 
-		// Initialize WOW.js
-		(window as any).wow.init()
-
-		AOS.init()
-
+		// Handle scroll events
 		const handleScroll = (): void => {
 			const scrollCheck: boolean = window.scrollY > 100
 			if (scrollCheck !== scroll) {
@@ -81,6 +90,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 			document.removeEventListener("scroll", handleScroll)
 		}
 	}, [scroll])
+	
 	return (
 		<>
 			<div id="top" />
