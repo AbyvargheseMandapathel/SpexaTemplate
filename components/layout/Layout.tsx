@@ -59,37 +59,31 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 	const handleSearch = (): void => setSearch(!isSearch)
 
 	useEffect(() => {
-		// Initialize AOS
-		AOS.init({ once: true });
-		
-		// Initialize WOW.js safely with dynamic import
 		if (typeof window !== 'undefined') {
-			// Use dynamic import for WOW.js to avoid SSR issues
-			import('wow.js').then((WOWModule: { default: any }) => {
-			  const WOW = WOWModule.default || WOWModule;
-			  const wow = new WOW({
-			    live: false
-			  });
-			  wow.init();
-			}).catch(err => {
-			  console.error('Error loading WOW.js:', err);
+		  import('wow.js').then((WOWModule: { default: any }) => {
+			const WOW = WOWModule.default || WOWModule;
+			const wow = new WOW({
+			  live: false
 			});
-		}
-
-		// Handle scroll events
-		const handleScroll = (): void => {
-			const scrollCheck: boolean = window.scrollY > 100
+			wow.init();
+		  });
+	  
+		  AOS.init();
+	  
+		  const handleScroll = (): void => {
+			const scrollCheck: boolean = window.scrollY > 100;
 			if (scrollCheck !== scroll) {
-				setScroll(scrollCheck)
+			  setScroll(scrollCheck);
 			}
+		  };
+	  
+		  document.addEventListener("scroll", handleScroll);
+	  
+		  return () => {
+			document.removeEventListener("scroll", handleScroll);
+		  };
 		}
-
-		document.addEventListener("scroll", handleScroll)
-
-		return () => {
-			document.removeEventListener("scroll", handleScroll)
-		}
-	}, [scroll])
+	  }, [scroll]);
 	
 	return (
 		<>
