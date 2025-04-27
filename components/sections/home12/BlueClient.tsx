@@ -1,8 +1,9 @@
 'use client'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import { motion } from 'framer-motion';
 
-export default function Section6() {
+export default function BlueClient() {
   const partners = [
     { id: 1, image: "https://spexaelectrical.com/wp-content/uploads/2023/08/Adnoc.png", name: "Partner 1" },
     { id: 2, image: "https://spexaelectrical.com/wp-content/uploads/2023/08/Qatar-Petroleum.png", name: "Partner 2" },
@@ -19,18 +20,46 @@ export default function Section6() {
   return (
     <>
       <section className="position-relative overflow-hidden box-latest-blog-3 box-services-12" style={{
-        background: 'linear-gradient(135deg,rgb(152, 175, 200) 0%,rgb(142, 174, 209) 50%,rgb(74, 135, 204) 100%)',
+        backgroundImage: `url(https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-1-67d12caced734.webp)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         padding: '100px 0',
         position: 'relative'
       }}>
-        <div className="container" data-aos="fade-up">
+        {/* Blurred background overlay */}
+        <div className="blur-background" style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundImage: `url(https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-1-67d12caced734.webp)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'blur(8px)',
+          zIndex: 0
+        }}></div>
+        
+        {/* Color overlay with solid color */}
+        <div className="color-overlay" style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgb(14, 48, 68)',
+          opacity: 0.8,
+          zIndex: 1
+        }}></div>
+        
+        <div className="container position-relative" style={{ zIndex: 3 }} data-aos="fade-up">
           <div className="row position-relative align-items-end">
             <div className="col-lg-7 mb-4 text-center text-lg-start">
-              <p className="sub-heading-ag-sm text-uppercase text-line-up-down dark-950 mb-3">OUR PARTNERS</p>
-              <h3 className="heading-ag-3xl secondery-500">Trusted Partners in Excellence</h3>
+              <p className="sub-heading-ag-sm text-uppercase text-line-up-down mb-3" style={{ color: 'white' }}>OUR PARTNERS</p>
+              <h3 className="heading-ag-3xl" style={{ color: 'white' }}>Trusted Partners in Excellence</h3>
             </div>
             <div className="col-lg-5 mb-4 text-center text-lg-start">
-              <p className="paragraph-rubik-r dark-950-70">We are proud to collaborate with industry leaders and innovative organizations that share our commitment to excellence and technological advancement.</p>
+              <p className="paragraph-rubik-r" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>We are proud to collaborate with industry leaders and innovative organizations that share our commitment to excellence and technological advancement.</p>
             </div>
           </div>
 
@@ -69,16 +98,19 @@ export default function Section6() {
                     alignItems: 'center',
                     height: '150px'
                   }}>
+                    {/* Fixed logo container with proper background and styling */}
                     <div className="partner-logo hover-up-down" style={{
                       width: '100%',
                       display: 'flex',
                       justifyContent: 'center',
-                      background: 'rgba(255, 255, 255, 0.5)',
+                      alignItems: 'center',
+                      background: 'rgba(255, 255, 255, 0.9)',
                       borderRadius: '15px',
-                      padding: '20px',
-                      boxShadow: '0 10px 20px rgba(0, 0, 0, 0.05)',
+                      padding: '15px',
+                      boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
                       transition: 'all 0.3s ease'
                     }}>
+                      {/* Fixed image styling without invert filter */}
                       <img 
                         src={partner.image} 
                         alt={partner.name} 
@@ -87,6 +119,10 @@ export default function Section6() {
                           maxWidth: '100%',
                           objectFit: 'contain',
                           margin: '0 auto'
+                        }}
+                        onError={(e) => {
+                          e.currentTarget.onerror = null;
+                          e.currentTarget.src = "https://via.placeholder.com/150x80?text=Logo";
                         }}
                       />
                     </div>
@@ -98,11 +134,15 @@ export default function Section6() {
         </div>
       </section>
       
-      <style jsx>{`
+      <style jsx global>{`
+        :root {
+          --swiper-theme-color: #007aff;
+        }
+        
         .partner-logo:hover {
           transform: translateY(-10px);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-          background: rgba(255, 255, 255, 0.8) !important;
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+          background: rgba(255, 255, 255, 1) !important;
         }
         
         .hover-up-down {
@@ -118,6 +158,52 @@ export default function Section6() {
           }
           100% {
             transform: translateY(0px);
+          }
+        }
+        
+        /* Make sure the swiper container is visible */
+        .swiper-container {
+          overflow: visible !important;
+        }
+        
+        /* Ensure swiper navigation is visible */
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: white !important;
+          background: rgba(0, 122, 255, 0.5);
+          width: 40px !important;
+          height: 40px !important;
+          border-radius: 50%;
+          display: flex !important;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        @media (max-width: 767px) {
+          .partner-logo {
+            padding: 15px !important;
+          }
+          
+          .partner-item {
+            height: 120px !important;
+          }
+          
+          .partner-logo img {
+            height: 60px !important;
+          }
+        }
+        
+        @media (max-width: 575px) {
+          .partner-logo {
+            padding: 10px !important;
+          }
+          
+          .partner-item {
+            height: 100px !important;
+          }
+          
+          .partner-logo img {
+            height: 50px !important;
           }
         }
       `}</style>
