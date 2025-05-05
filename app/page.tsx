@@ -48,7 +48,7 @@ export default function Home12() {
 				<BlueClient />
 				{/* <Section3 /> */}
 				<Services />
-				{/* <Products /> */}
+				<Products />
 				<Projects />
 				{/* <Section7 /> */}
 				{/*<Section6 />
