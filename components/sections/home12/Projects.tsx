@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { useState } from 'react'
+import { SetStateAction, useState } from 'react'
 import projectsData from '../../../data/projects.json'
 
 export default function Projects() {
@@ -9,7 +9,7 @@ export default function Projects() {
   // Extract unique categories from projectsData
   const categories = ['all', ...new Set(projectsData.map((project) => project.category.toLowerCase()))]
 
-  const handleTabChange = (tab) => {
+  const handleTabChange = (tab: SetStateAction<string>) => {
     setActiveTab(tab)
   }
 

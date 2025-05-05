@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { useState } from 'react'
+import { SetStateAction, useState } from 'react'
 import productsData from '../../../data/products.json'
 
 export default function Products() {
@@ -9,7 +9,7 @@ export default function Products() {
   // Extract unique categories from productsData
   const categories = ['all', ...new Set(productsData.map((product) => product.category.toLowerCase()))]
 
-  const handleTabChange = (tab) => {
+  const handleTabChange = (tab: SetStateAction<string>) => {
     setActiveTab(tab)
   }
 
