@@ -17,6 +17,8 @@ import BlueClient from "@/components/sections/home12/BlueClient"
 import AboutUsSection from "@/components/sections/home12/AboutUsSection"
 import MovingTextBanner from "@/components/elements/MovingTextBanner"
 import Services from "@/components/sections/home12/Services"
+import Products from "@/components/sections/home12/Products"
+import Projects from "@/components/sections/home12/Projects"
 
 export default function Home12() {
 
@@ -44,8 +46,10 @@ export default function Home12() {
 				<AboutUsSection />
 				{/* <Client /> */}
 				<BlueClient />
-				 {/* <Section3 /> */}
+				{/* <Section3 /> */}
 				<Services />
+				{/* <Products /> */}
+				{/* <Projects /> */}
 				{/* <Section7 /> */}
 				{/*<Section6 />
 				<Section7 />
