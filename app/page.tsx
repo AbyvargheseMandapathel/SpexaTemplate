@@ -19,7 +19,7 @@ export default function Home12() {
 	return (
 		<>
 
-			<Layout headerStyle={12} footerStyle={17}>
+			<Layout headerStyle={12} footerStyle={8}>
 				{/* <CarouselSection2 /> */}
 				<Section1 />
 				<Section2 />
