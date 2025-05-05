@@ -1,0 +1,13 @@
+.scroller {
+  max-width: 100%;
+}
+
+.scroller__inner {
+  padding-block: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroller__inner {
+    animation-play-state: paused !important;
+  }
+}

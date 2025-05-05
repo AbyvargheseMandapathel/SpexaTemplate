@@ -39,6 +39,7 @@ import Header9 from './header/Header9'
 import Offcanvas from './Offcanvas'
 import Search from './Search'
 import FooterModern from './footer/FooterModern'
+import SpexaFooter from './footer/SpexaFooter'
 
 
 interface LayoutProps {
@@ -132,6 +133,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 			{footerStyle == 15 ? < Footer15 /> : null}
 			{footerStyle == 16 ? < Footer16 /> : null}
 			{footerStyle == 17 ? < FooterModern /> : null}
+			{footerStyle == 18 ? < SpexaFooter /> : null}
 
 			<BackToTop target="#top" />
 		</>

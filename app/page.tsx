@@ -14,15 +14,33 @@ import Section9 from '@/components/sections/home12/Section9'
 import CarouselSection1 from "@/components/sections/home12/CarouselSection1"
 import CarouselSection2 from "@/components/sections/home12/CarouselSection2"
 import BlueClient from "@/components/sections/home12/BlueClient"
+import AboutUsSection from "@/components/sections/home12/AboutUsSection"
+import MovingTextBanner from "@/components/elements/MovingTextBanner"
+
 export default function Home12() {
+
+	const bannerItems = [
+		"INDUSTRY-LEADING SOLUTIONS",
+		"EXPLOSION-PROOF EXPERTISE",
+		"CERTIFIED QUALITY",
+		"GLOBAL SERVICE"
+	  ]
 
 	return (
 		<>
 
-			<Layout headerStyle={12} footerStyle={8}>
+			<Layout headerStyle={12} footerStyle={13}>
 				{/* <CarouselSection2 /> */}
 				<Section1 />
-				<Section2 />
+				{/* <Section2 /> */}
+				{/* Moving Text Banner */}
+				<MovingTextBanner 
+        items={bannerItems} 
+        backgroundColor="#001c3c"
+        textColor="#ffffff"
+        speed={40}
+      />
+				<AboutUsSection />
 				{/* <Client /> */}
 				<BlueClient />
 				 {/* <Section3 /> */}
@@ -32,6 +50,12 @@ export default function Home12() {
 				<Section7 />
 				<Section8 />
 				<Section9 /> */}
+				<MovingTextBanner 
+        items={bannerItems} 
+        backgroundColor="#ffffff"
+        textColor="#001c3c"
+        speed={40}
+      />
 				{/* <Section10 /> */}
 			</Layout>
 		</>

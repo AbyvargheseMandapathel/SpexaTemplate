@@ -9,7 +9,7 @@ export default function Footer13() {
 					<div className="container">
 						<div className="top-footer">
 							<div className="top-footer-left">
-								<h4 className="heading-ag-3xl color-white">Have an idea lets <br />work together ?</h4>
+								<h4 className="heading-ag-3xl color-white">We Are Ready  <br />To Help You</h4>
 							</div>
 							<div className="top-footer-right">
 								<div className="form-newsletter">
@@ -22,8 +22,8 @@ export default function Footer13() {
 						</div>
 						<div className="row">
 							<div className="col-lg-3 col-md-6 mb-4">
-								<Link className="navbar-brand pe-4" href="/"><img src="/assets/imgs/template/logo-footer-5.svg" alt="" /></Link>
-								<p className="paragraph-base color-white pt-4 pb-2">we denounce with righteous indignation and dislike men who are so beguiled demoralized by the charms</p>
+								<Link className="navbar-brand pe-4" href="/"><img src="/assets/imgs/template/spexa-logo.png" alt="" /></Link>
+								<p className="paragraph-base color-white pt-4 pb-2">Spexa has been a leading electrical engineering solutions provider since 2014. Our team of world - class Engineers understand client's requirements and ensure suitable solution for all their engineering needs.</p>
 								<div className="box-social-profile pt-2">
 									<div className="list-socials">
 										<Link href="#" className="share">
@@ -90,7 +90,7 @@ export default function Footer13() {
 									<ul className="recent-news-list">
 										<li>
 											<div className="news-image">
-												<Link href="#"><img src="/assets/imgs/pages/home13/news2.png" alt="Vatech" /></Link>
+												<Link href="#"><img src="/assets/imgs/pages/home13/news2.png" alt="Spexa" /></Link>
 											</div>
 											<div className="news-info">
 												<div className="news-postdate">
@@ -128,7 +128,7 @@ export default function Footer13() {
 							<div className="footer-bottom">
 								<div className="row paragraph-base">
 									<div className="col-sm-6 col-12 text-center text-md-start">
-										<div className="paragraph-rubik-r color-white-70">Copyright © Vatech {new Date().getFullYear()} . Alright Reserved.</div>
+										<div className="paragraph-rubik-r color-white-70">Copyright © Spexa{new Date().getFullYear()} . Alright Reserved.</div>
 									</div>
 									<div className="col-sm-6 col-12 d-flex justify-content-center justify-content-md-end">
 										<ul className="menu-footer">
