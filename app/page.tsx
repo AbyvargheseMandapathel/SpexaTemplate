@@ -16,6 +16,7 @@ import CarouselSection2 from "@/components/sections/home12/CarouselSection2"
 import BlueClient from "@/components/sections/home12/BlueClient"
 import AboutUsSection from "@/components/sections/home12/AboutUsSection"
 import MovingTextBanner from "@/components/elements/MovingTextBanner"
+import Services from "@/components/sections/home12/Services"
 
 export default function Home12() {
 
@@ -29,22 +30,22 @@ export default function Home12() {
 	return (
 		<>
 
-			<Layout headerStyle={12} footerStyle={13}>
+			<Layout headerStyle={12} footerStyle={18}>
 				{/* <CarouselSection2 /> */}
 				<Section1 />
 				{/* <Section2 /> */}
 				{/* Moving Text Banner */}
 				<MovingTextBanner 
         items={bannerItems} 
-        backgroundColor="#001c3c"
-        textColor="#ffffff"
+        backgroundColor="#ffffff"
+        textColor="#001c3c"
         speed={40}
       />
 				<AboutUsSection />
 				{/* <Client /> */}
 				<BlueClient />
 				 {/* <Section3 /> */}
-				<Section4 />
+				<Services />
 				{/* <Section7 /> */}
 				{/*<Section6 />
 				<Section7 />

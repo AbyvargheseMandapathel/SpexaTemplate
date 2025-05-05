@@ -1,113 +1,122 @@
 import Link from 'next/link'
 
-export default function SpexaFooter() {
+export default function Footer13() {
 	return (
 		<>
-			<footer className="footer-2 footer-style-spexa">
-				<div className="top-footer">
-					<div className="container">
-						<div className="top-footer-logo">
-							<div className="left-footer">
-								<h3 className="sub-heading-ag-xl color-white">Connect With Spexa Consulting Experts</h3>
-							</div>
-							<div className="middle-footer">
-								<Link href="/"><img src="/assets/imgs/template/logo-footer-2.svg" alt="Spexa" /></Link>
-							</div>
-							<div className="right-footer">
-								<h3 className="sub-heading-ag-xl color-white">Contact Us</h3>
-								<h3 className="sub-heading-ag-xl color-white-60">800-SPEXA-HELP</h3>
-							</div>
-						</div>
-					</div>
-				</div>
+
+			<footer className="footer-style-10 footer-style-blue" style={{ backgroundColor: '#001b2b' }}>
 				<div className="container-fluid ft-bgr section-footer">
 					<div className="container">
+						<div className="top-footer">
+							<div className="top-footer-left">
+								<h4 className="heading-ag-3xl color-white">We Are Ready  <br />To Help You</h4>
+							</div>
+							<div className="top-footer-right">
+								<div className="form-newsletter">
+									<form action="#">
+										<input type="text" className="form-control" placeholder="Email Address" />
+										<input type="submit" className="btn btn-newsletter" />
+									</form>
+								</div>
+							</div>
+						</div>
 						<div className="row">
-							<div className="col-lg-3">
-								<h3 className="text-footer pb-1">About Spexa</h3>
-								<p className="paragraph-base color-white pt-4 pb-2">Spexa delivers innovative consulting solutions to help businesses transform, grow, and succeed in today's competitive marketplace.</p>
+							<div className="col-lg-3 col-md-6 mb-4">
+								{/* <Link className="navbar-brand pe-4" href="/"><img src="/assets/imgs/template/spexa-logo.png" alt="" /></Link> */}
+								<p className="paragraph-base color-white pt-4 pb-2">Spexa has been a leading electrical engineering solutions provider since 2014. Our team of world - class Engineers understand client's requirements and ensure suitable solution for all their engineering needs.</p>
 								<div className="box-social-profile pt-2">
 									<div className="list-socials">
-										<Link href="#" className="share fb">
-											<svg width={9} height={18} viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M2.66426 18H5.83755V9.7875H8.49097L8.8917 6.5925H5.83755V4.545C5.83755 3.6225 6.08664 2.9925 7.36462 2.9925H9V0.12375C8.71841 0.0899999 7.75451 0 6.62816 0C4.26715 0 2.66426 1.49625 2.66426 4.23V6.5925H0V9.7875H2.66426V18Z" fill="white" />
+										<Link href="#" className="share">
+											<svg width={9} height={15} viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M7.62891 8.14062H5.57812V14.2656H2.84375V8.14062H0.601562V5.625H2.84375V3.68359C2.84375 1.49609 4.15625 0.265625 6.15234 0.265625C7.10938 0.265625 8.12109 0.457031 8.12109 0.457031V2.61719H7C5.90625 2.61719 5.57812 3.27344 5.57812 3.98438V5.625H8.01172L7.62891 8.14062Z" fill="white" />
 											</svg>
 										</Link>
-										<Link href="#" className="share tw">
-											<svg width={15} height={15} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M8.73508 6.35148L14.1991 0H12.9043L8.1599 5.5149L4.37056 0H0L5.73023 8.3395L0 15H1.29487L6.30508 9.17608L10.3069 15H14.6775L8.73477 6.35148H8.73508ZM6.96158 8.41297L6.38099 7.58255L1.76143 0.974755H3.75027L7.47831 6.30746L8.05891 7.13788L12.9049 14.0696H10.9161L6.96158 8.41329V8.41297Z" fill="white" />
+										<Link href="#" className="share">
+											<svg width={17} height={17} viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.0596 6.86085L15.8879 0.0859375H14.5068L9.44607 5.96849L5.40411 0.0859375H0.742188L6.85442 8.98141L0.742188 16.0859H2.12338L7.4676 9.87376L11.7362 16.0859H16.3981L10.0593 6.86085H10.0596ZM8.16787 9.05978L7.54857 8.17399L2.62104 1.12568H4.74248L8.71905 6.81389L9.33834 7.69968L14.5074 15.0935H12.386L8.16787 9.06012V9.05978Z" fill="white" />
 											</svg>
 										</Link>
-										<Link href="#" className="share instagram">
-											<svg width={21} height={21} viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M10.4972 15.8875C7.51584 15.8875 5.10976 13.4814 5.10976 10.5C5.10976 7.51861 7.51584 5.11249 10.4972 5.11249C13.4785 5.11249 15.8846 7.51861 15.8846 10.5C15.8846 13.4814 13.4785 15.8875 10.4972 15.8875ZM10.4972 6.99851C8.56916 6.99851 6.99575 8.57195 6.99575 10.5C6.99575 12.4281 8.56916 14.0015 10.4972 14.0015C12.4252 14.0015 13.9986 12.4281 13.9986 10.5C13.9986 8.57195 12.4252 6.99851 10.4972 6.99851ZM16.1052 17.3638C15.4092 17.3638 14.847 16.8016 14.847 16.1055C14.847 15.4094 15.4092 14.8473 16.1052 14.8473C16.8013 14.8473 17.3634 15.4068 17.3634 16.1055C17.3636 16.2708 17.3312 16.4345 17.2681 16.5873C17.2049 16.74 17.1123 16.8788 16.9954 16.9957C16.8785 17.1126 16.7397 17.2053 16.587 17.2684C16.4342 17.3316 16.2705 17.364 16.1052 17.3638ZM20.9988 10.5C20.9988 11.95 21.012 13.3868 20.9305 14.8342C20.8491 16.5153 20.4656 18.0073 19.2363 19.2367C18.0044 20.4686 16.515 20.8495 14.8339 20.9309C13.3839 21.0124 11.9471 20.9992 10.4998 20.9992C9.04985 20.9992 7.61303 21.0124 6.16571 20.9309C4.4846 20.8495 2.99262 20.466 1.76331 19.2367C0.53138 18.0047 0.150505 16.5153 0.0690761 14.8342C-0.0123524 13.3842 0.000781304 11.9474 0.000781304 10.5C0.000781304 9.05265 -0.0123524 7.61318 0.0690761 6.16582C0.150505 4.48469 0.534007 2.99268 1.76331 1.76335C2.99525 0.531391 4.4846 0.150508 6.16571 0.0690783C7.61566 -0.0123517 9.05248 0.000781169 10.4998 0.000781169C11.9498 0.000781169 13.3866 -0.0123517 14.8339 0.0690783C16.515 0.150508 18.007 0.534018 19.2363 1.76335C20.4682 2.99531 20.8491 4.48469 20.9305 6.16582C21.0146 7.61318 20.9988 9.05002 20.9988 10.5ZM18.6873 4.30607C18.4956 3.82799 18.2644 3.47075 17.894 3.103C17.5237 2.73263 17.1691 2.50147 16.691 2.30972C15.3093 1.76072 12.0286 1.88418 10.4972 1.88418C8.9658 1.88418 5.68239 1.76072 4.30073 2.30709C3.82267 2.49884 3.46543 2.73 3.09769 3.10038C2.72732 3.47075 2.49617 3.82537 2.30442 4.30344C1.75806 5.68775 1.88152 8.96859 1.88152 10.5C1.88152 12.0314 1.75806 15.3149 2.30442 16.6966C2.49617 17.1746 2.72732 17.5319 3.09769 17.8996C3.46806 18.2674 3.82267 18.5012 4.30073 18.6929C5.68239 19.2393 8.9658 19.1158 10.4972 19.1158C12.0286 19.1158 15.312 19.2393 16.6936 18.6929C17.1717 18.5012 17.5289 18.27 17.8967 17.8996C18.267 17.5293 18.4982 17.1746 18.6899 16.6966C19.2363 15.3149 19.1128 12.0314 19.1128 10.5C19.1128 8.96859 19.2363 5.68775 18.6873 4.30607Z" fill="white" />
+										<Link href="#" className="share">
+											<svg width={13} height={13} viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M11.375 0.140625C11.8398 0.140625 12.25 0.550781 12.25 1.04297V11.5156C12.25 12.0078 11.8398 12.3906 11.375 12.3906H0.847656C0.382812 12.3906 0 12.0078 0 11.5156V1.04297C0 0.550781 0.382812 0.140625 0.847656 0.140625H11.375ZM3.69141 10.6406V4.81641H1.88672V10.6406H3.69141ZM2.78906 3.99609C3.36328 3.99609 3.82812 3.53125 3.82812 2.95703C3.82812 2.38281 3.36328 1.89062 2.78906 1.89062C2.1875 1.89062 1.72266 2.38281 1.72266 2.95703C1.72266 3.53125 2.1875 3.99609 2.78906 3.99609ZM10.5 10.6406V7.44141C10.5 5.88281 10.1445 4.65234 8.3125 4.65234C7.4375 4.65234 6.83594 5.14453 6.58984 5.60938H6.5625V4.81641H4.83984V10.6406H6.64453V7.76953C6.64453 7.00391 6.78125 6.26562 7.73828 6.26562C8.66797 6.26562 8.66797 7.14062 8.66797 7.79688V10.6406H10.5Z" fill="white" />
 											</svg>
 										</Link>
-										<Link href="#" className="share linkedin">
-											<svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M3.64 2.00001C3.64 3.10001 2.74 4.00001 1.64 4.00001C0.54 4.00001 -0.36 3.10001 -0.36 2.00001C-0.36 0.900012 0.54 1.14441e-05 1.64 1.14441e-05C2.74 1.14441e-05 3.64 0.900012 3.64 2.00001ZM3.64 5.50001H-0.36V16H3.64V5.50001ZM8.64 5.50001H4.64V16H8.64V10.43C8.64 6.77001 13.64 6.43001 13.64 10.43V16H17.64V9.00001C17.64 2.64001 10.14 2.92001 8.64 5.92001V5.50001Z" fill="white"/>
+										<Link href="#" className="share">
+											<svg width={11} height={15} viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M5.57812 0.457031C8.14844 0.457031 10.5 2.23438 10.5 4.94141C10.5 7.48438 9.1875 10.3281 6.28906 10.3281C5.57812 10.3281 4.73047 9.97266 4.375 9.34375C3.77344 11.8047 3.80078 12.1875 2.43359 14.0742C2.29688 14.1289 2.32422 14.1289 2.24219 14.0195C2.1875 13.5 2.13281 13.0078 2.13281 12.4883C2.13281 10.8203 2.89844 8.38672 3.28125 6.77344C3.0625 6.33594 3.00781 5.84375 3.00781 5.37891C3.00781 3.19141 5.57812 2.86328 5.57812 4.66797C5.57812 5.73438 4.83984 6.74609 4.83984 7.78516C4.83984 8.46875 5.44141 8.96094 6.125 8.96094C8.01172 8.96094 8.58594 6.25391 8.58594 4.80469C8.58594 2.86328 7.21875 1.79688 5.33203 1.79688C3.17188 1.79688 1.50391 3.35547 1.50391 5.54297C1.50391 6.60938 2.16016 7.15625 2.16016 7.40234C2.16016 7.62109 1.99609 8.35938 1.72266 8.35938C1.06641 8.35938 0 7.26562 0 5.35156C0 2.31641 2.76172 0.457031 5.57812 0.457031Z" fill="white" />
 											</svg>
 										</Link>
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-9">
-								<div className="row">
-									<div className="col-lg-3 col-md-6">
-										<h3 className="text-footer pb-1">Services</h3>
-										<div className="d-flex flex-column align-items-start">
-											<Link className="hover-effect paragraph-base grey-100 pt-4" href="#">Business Strategy</Link>
-											<Link className="hover-effect paragraph-base grey-100 pt-2" href="#">Digital Transformation</Link>
-											<Link className="hover-effect paragraph-base grey-100 pt-2" href="#">Market Analysis</Link>
-											<Link className="hover-effect paragraph-base grey-100 pt-2" href="#">Financial Advisory</Link>
-											<Link className="hover-effect paragraph-base grey-100 pt-2" href="#">Operations Consulting</Link>
-										</div>
-									</div>
-									<div className="col-lg-3 col-md-6">
-										<h3 className="text-footer pb-1">Resources</h3>
-										<div className="d-flex flex-column align-items-start">
-											<Link className="hover-effect paragraph-base grey-100 pt-4" href="#">Case Studies</Link>
-											<Link className="hover-effect paragraph-base grey-100 pt-2" href="#">White Papers</Link>
-											<Link className="hover-effect paragraph-base grey-100 pt-2" href="#">Industry Reports</Link>
-											<Link className="hover-effect paragraph-base grey-100 pt-2" href="#">Webinars</Link>
-											<Link className="hover-effect paragraph-base grey-100 pt-2" href="#">Knowledge Base</Link>
-										</div>
-									</div>
-									<div className="col-lg-3 col-md-6">
-										<h3 className="text-footer pb-1">Company</h3>
-										<div className="d-flex flex-column align-items-start">
-											<Link className="hover-effect paragraph-base grey-100 pt-4" href="#">About Us</Link>
-											<Link className="hover-effect paragraph-base grey-100 pt-2" href="#">Our Team</Link>
-											<Link className="hover-effect paragraph-base grey-100 pt-2" href="#">Careers</Link>
-											<Link className="hover-effect paragraph-base grey-100 pt-2" href="#">Partners</Link>
-											<Link className="hover-effect paragraph-base grey-100 pt-2" href="#">Contact</Link>
-										</div>
-									</div>
-									<div className="col-lg-3 col-md-6">
-										<h3 className="text-footer pb-1">Contact Us</h3>
-										<div className="pt-4">
-											<p className="text-inline">
-											<svg className="me-2" width={14} height={15} viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M13.6199 10.759L11.6661 8.80522C10.9684 8.10746 9.78218 8.38659 9.50307 9.29366C9.29374 9.92167 8.59598 10.2706 7.96799 10.131C6.57246 9.78209 4.68849 7.9679 4.33961 6.5026C4.13028 5.87458 4.54894 5.17682 5.17693 4.96751C6.08402 4.68841 6.36313 3.50221 5.66536 2.80444L3.71162 0.850702C3.15341 0.362266 2.31609 0.362266 1.82766 0.850702L0.501902 2.17646C-0.823851 3.57198 0.641455 7.27014 3.92095 10.5496C7.20045 13.8291 10.8986 15.3642 12.2941 13.9687L13.6199 12.6429C14.1083 12.0847 14.1083 11.2474 13.6199 10.759Z" fill="#FFFFFF" />
+							<div className="col-lg-2 col-md-6 mb-4">
+								<h3 className="text-footer pb-1 mb-4">Services</h3>
+								<div className="d-flex flex-column align-items-start">
+									<Link className="hover-effect paragraph-base grey-100 pt-1" href="#"> About Us </Link>
+									<Link className="hover-effect paragraph-base grey-100 pt-3" href="#"> Our Team </Link>
+									<Link className="hover-effect paragraph-base grey-100 pt-3" href="#"> Recent News </Link>
+									<Link className="hover-effect paragraph-base grey-100 pt-3" href="#"> Projects </Link>
+									<Link className="hover-effect paragraph-base grey-100 pt-3" href="#"> Our All Services </Link>
+								</div>
+							</div>
+							<div className="col-lg-4 col-md-6 mb-4">
+								<h3 className="text-footer pb-1 mb-4">Contact</h3>
+								<div className="pt-0">
+									<p className="text-inline">
+										<Link href="/mailto:dolores.chambers@example.com">
+											<svg className="me-2" width={14} height={14} viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M12.6875 1.5C13.3984 1.5 14 2.10156 14 2.8125C14 3.25 13.7812 3.63281 13.4531 3.87891L7.51953 8.33594C7.19141 8.58203 6.78125 8.58203 6.45312 8.33594L0.519531 3.87891C0.191406 3.63281 0 3.25 0 2.8125C0 2.10156 0.574219 1.5 1.3125 1.5H12.6875ZM5.93359 9.04688C6.5625 9.51172 7.41016 9.51172 8.03906 9.04688L14 4.5625V10.25C14 11.2344 13.207 12 12.25 12H1.75C0.765625 12 0 11.2344 0 10.25V4.5625L5.93359 9.04688Z" fill="currentColor" />
 											</svg>
-											<span className="color-white-70 paragraph-rubik-r">800-SPEXA-HELP</span>
-											</p>
-											<p className="text-inline">
-												<Link href="mailto:info@spexa.com">
-													<svg className="me-2" width={14} height={14} viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M12.6875 1.5C13.3984 1.5 14 2.10156 14 2.8125C14 3.25 13.7812 3.63281 13.4531 3.87891L7.51953 8.33594C7.19141 8.58203 6.78125 8.58203 6.45312 8.33594L0.519531 3.87891C0.191406 3.63281 0 3.25 0 2.8125C0 2.10156 0.574219 1.5 1.3125 1.5H12.6875ZM5.93359 9.04688C6.5625 9.51172 7.41016 9.51172 8.03906 9.04688L14 4.5625V10.25C14 11.2344 13.207 12 12.25 12H1.75C0.765625 12 0 11.2344 0 10.25V4.5625L5.93359 9.04688Z" fill="#FFFFFF" />
+											<span className="color-white-70">dolores.chambers@example.com</span>
+										</Link>
+									</p>
+									<p className="text-inline">
+										<svg className="me-2" width={11} height={15} viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M4.59375 14.4219C3.17188 12.6445 0 8.40625 0 6C0 3.10156 2.32422 0.75 5.25 0.75C8.14844 0.75 10.5 3.10156 10.5 6C10.5 8.40625 7.30078 12.6445 5.87891 14.4219C5.55078 14.832 4.92188 14.832 4.59375 14.4219ZM5.25 7.75C6.20703 7.75 7 6.98438 7 6C7 5.04297 6.20703 4.25 5.25 4.25C4.26562 4.25 3.5 5.04297 3.5 6C3.5 6.98438 4.26562 7.75 5.25 7.75Z" fill="currentColor" />
+										</svg>
+										<span className="color-white-70">1901 Thornridge Cir. Shiloh, Hawaii 81063</span>
+									</p>
+									<p className="text-inline">
+										<svg className="me-2" width={14} height={15} viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M13.6199 10.759L11.6661 8.80522C10.9684 8.10746 9.78218 8.38659 9.50307 9.29366C9.29374 9.92167 8.59598 10.2706 7.96799 10.131C6.57246 9.78209 4.68849 7.9679 4.33961 6.5026C4.13028 5.87458 4.54894 5.17682 5.17693 4.96751C6.08402 4.68841 6.36313 3.50221 5.66536 2.80444L3.71162 0.850702C3.15341 0.362266 2.31609 0.362266 1.82766 0.850702L0.501902 2.17646C-0.823851 3.57198 0.641455 7.27014 3.92095 10.5496C7.20045 13.8291 10.8986 15.3642 12.2941 13.9687L13.6199 12.6429C14.1083 12.0847 14.1083 11.2474 13.6199 10.759Z" fill="currentColor" />
+										</svg>
+										<span className="color-white-70">+123 888 9999</span>
+									</p>
+								</div>
+							</div>
+							<div className="col-lg-3 col-md-6 mb-4">
+								<h3 className="text-footer pb-1 mb-4">Recent News</h3>
+								<div className="d-flex flex-column align-items-start">
+									<ul className="recent-news-list">
+										<li>
+											<div className="news-image">
+												<Link href="#"><img src="/assets/imgs/pages/home13/news2.png" alt="Spexa" /></Link>
+											</div>
+											<div className="news-info">
+												<div className="news-postdate">
+													<svg width={11} height={13} viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M3.5625 2H6.9375V1.0625C6.9375 0.757812 7.17188 0.5 7.5 0.5C7.80469 0.5 8.0625 0.757812 8.0625 1.0625V2H9C9.82031 2 10.5 2.67969 10.5 3.5V11C10.5 11.8438 9.82031 12.5 9 12.5H1.5C0.65625 12.5 0 11.8438 0 11V3.5C0 2.67969 0.65625 2 1.5 2H2.4375V1.0625C2.4375 0.757812 2.67188 0.5 3 0.5C3.30469 0.5 3.5625 0.757812 3.5625 1.0625V2ZM1.125 6.3125H3V5H1.125V6.3125ZM1.125 7.4375V8.9375H3V7.4375H1.125ZM4.125 7.4375V8.9375H6.375V7.4375H4.125ZM7.5 7.4375V8.9375H9.375V7.4375H7.5ZM9.375 5H7.5V6.3125H9.375V5ZM9.375 10.0625H7.5V11.375H9C9.1875 11.375 9.375 11.2109 9.375 11V10.0625ZM6.375 10.0625H4.125V11.375H6.375V10.0625ZM3 10.0625H1.125V11C1.125 11.2109 1.28906 11.375 1.5 11.375H3V10.0625ZM6.375 5H4.125V6.3125H6.375V5Z" fill="currentColor" />
 													</svg>
-													<span className="color-white-70 paragraph-rubik-r">info@spexa.com</span>
-												</Link>
-											</p>
-											<p className="text-inline">
-												<svg className="me-2" width={11} height={15} viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M4.59375 14.4219C3.17188 12.6445 0 8.40625 0 6C0 3.10156 2.32422 0.75 5.25 0.75C8.14844 0.75 10.5 3.10156 10.5 6C10.5 8.40625 7.30078 12.6445 5.87891 14.4219C5.55078 14.832 4.92188 14.832 4.59375 14.4219ZM5.25 7.75C6.20703 7.75 7 6.98438 7 6C7 5.04297 6.20703 4.25 5.25 4.25C4.26562 4.25 3.5 5.04297 3.5 6C3.5 6.98438 4.26562 7.75 5.25 7.75Z" fill="#FFFFFF" />
-												</svg>
-												<span className="color-white-70 paragraph-rubik-r">123 Business Avenue, Suite 500, New York, NY 10001</span>
-											</p>
-										</div>
-									</div>
+													<span className="paragraph-rubik-r color-white-70">17 oct 23</span>
+												</div>
+												<Link href="#" className="paragraph-rubik-r news-link">Market research helps businesses understand</Link>
+											</div>
+										</li>
+										<li>
+											<div className="news-image">
+												<Link href="#"><img src="/assets/imgs/pages/home13/news3.png" alt="Vatech" /></Link>
+											</div>
+											<div className="news-info">
+												<div className="news-postdate">
+													<svg width={11} height={13} viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M3.5625 2H6.9375V1.0625C6.9375 0.757812 7.17188 0.5 7.5 0.5C7.80469 0.5 8.0625 0.757812 8.0625 1.0625V2H9C9.82031 2 10.5 2.67969 10.5 3.5V11C10.5 11.8438 9.82031 12.5 9 12.5H1.5C0.65625 12.5 0 11.8438 0 11V3.5C0 2.67969 0.65625 2 1.5 2H2.4375V1.0625C2.4375 0.757812 2.67188 0.5 3 0.5C3.30469 0.5 3.5625 0.757812 3.5625 1.0625V2ZM1.125 6.3125H3V5H1.125V6.3125ZM1.125 7.4375V8.9375H3V7.4375H1.125ZM4.125 7.4375V8.9375H6.375V7.4375H4.125ZM7.5 7.4375V8.9375H9.375V7.4375H7.5ZM9.375 5H7.5V6.3125H9.375V5ZM9.375 10.0625H7.5V11.375H9C9.1875 11.375 9.375 11.2109 9.375 11V10.0625ZM6.375 10.0625H4.125V11.375H6.375V10.0625ZM3 10.0625H1.125V11C1.125 11.2109 1.28906 11.375 1.5 11.375H3V10.0625ZM6.375 5H4.125V6.3125H6.375V5Z" fill="currentColor" />
+													</svg>
+													<span className="paragraph-rubik-r color-white-70">17 oct 23</span>
+												</div>
+												<Link href="#" className="paragraph-rubik-r news-link">Common types of business structure</Link>
+											</div>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -119,13 +128,14 @@ export default function SpexaFooter() {
 							<div className="footer-bottom">
 								<div className="row paragraph-base">
 									<div className="col-sm-6 col-12 text-center text-md-start">
-										<div className="small color-white">Copyright © Spexa {new Date().getFullYear()}. All Rights Reserved.</div>
+										<div className="paragraph-rubik-r color-white-70">Copyright © Spexa {new Date().getFullYear()} All Rights Reserved.</div>
 									</div>
 									<div className="col-sm-6 col-12 d-flex justify-content-center justify-content-md-end">
-										<p className="color-white">
-											<Link className="text-white me-3" href="#">Privacy Policy</Link>
-											<Link className="text-white" href="#">Terms of Service</Link>
-										</p>
+										<ul className="menu-footer">
+											<li><Link href="#">Terms & Conditions</Link></li>
+											<li><Link href="#">Privacy Policy</Link></li>
+											<li><Link href="#">Contact Us</Link></li>
+										</ul>
 									</div>
 								</div>
 							</div>
@@ -133,6 +143,7 @@ export default function SpexaFooter() {
 					</div>
 				</div>
 			</footer>
+
 		</>
 	)
 }

@@ -5,8 +5,13 @@ import Link from "next/link"
 export default function Section2() {
 	return (
 		<>
-
-			<section className="position-relative box-section box-about-us-12">
+			<section className="position-relative box-section box-about-us-12" style={{ 
+				backgroundColor: '#001b2b',
+				backgroundImage: 'url(/_next/static/media/bg-footer-2.eda2c9e8.png)',
+				backgroundRepeat: 'no-repeat',
+				backgroundSize: 'cover',
+				backgroundPosition: 'center'
+			}}>
 				<div className="container" data-aos="fade-up">
 					<div className="row position-relative align-items-center">
 						<div className="col-lg-6 position-relative">
