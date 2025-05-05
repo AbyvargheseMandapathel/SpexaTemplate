@@ -9,7 +9,7 @@ const slideContent = [
 	{
 		heading: "Premium Explosion-Proof Products",
 		description: "Spexa Electricals offers high-quality explosion-proof products, ensuring safety, reliability, and compliance for the oil and gas industry with cutting-edge technology and expert craftsmanship.",
-		backgroundImage: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-1-67d12caced734.webp",
+		backgroundImage: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-3-2-1-67d130542f3f8.webp",
 		imageSrc: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-3-2-1-67d130542f3f8.webp",
 		buttonText: "View Products",
 		buttonLink: "#products"
@@ -17,7 +17,7 @@ const slideContent = [
 	{
 		heading: "Expert Explosion-Proof Solutions",
 		description: "Spexa Electricals delivers reliable explosion-proof services, ensuring safety, compliance, and efficiency for the oil and gas industry with expert support and innovative solutions.",
-		backgroundImage: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-2-67d12cad16ec0.webp",
+		backgroundImage: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-1-67d12caced734.webp",
 		imageSrc: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-1-67d12caced734.webp",
 		buttonText: "Explore Solutions",
 		buttonLink: "#solutions"
@@ -25,7 +25,7 @@ const slideContent = [
 	{
 		heading: "Excellence in Explosion-Proof Projects",
 		description: "Spexa Electricals delivers high-quality explosion-proof projects, ensuring safety, reliability, and compliance for the oil and gas industry with innovative solutions and expert execution.",
-		backgroundImage: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-3-2-1-67d130542f3f8.webp",
+		backgroundImage: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-2-67d12cad16ec0.webp",
 		imageSrc: "https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-2-67d12cad16ec0.webp",
 		buttonText: "See Projects",
 		buttonLink: "#projects"

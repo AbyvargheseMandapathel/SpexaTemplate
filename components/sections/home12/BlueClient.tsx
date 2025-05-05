@@ -63,74 +63,81 @@ export default function BlueClient() {
             </div>
           </div>
 
-          <div className="partner-slider">
-            <Swiper
-              modules={[Autoplay]}
-              spaceBetween={50}
-              slidesPerView={2}
-              loop={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
+          <div className="max-w-[1320px] mx-auto px-4 overflow-hidden">
+  <Swiper
+    modules={[Autoplay]}
+    spaceBetween={20}
+    slidesPerView={2}
+    loop={true}
+    autoplay={{
+      delay: 2500,
+      disableOnInteraction: false,
+    }}
+    breakpoints={{
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 24,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 24,
+      },
+    }}
+    className="swiper-container"
+  >
+    {partners.map((partner) => (
+      <SwiperSlide key={partner.id}>
+        <div
+          className="partner-item"
+          data-aos="fade-up"
+          style={{
+            padding: '20px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '150px',
+          }}
+        >
+          <div
+            className="partner-logo hover-up-down"
+            style={{
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              background: 'rgba(255, 255, 255, 0.9)',
+              borderRadius: '15px',
+              padding: '15px',
+              boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
+              transition: 'all 0.3s ease',
+            }}
+          >
+            <img
+              src={partner.image}
+              alt={partner.name}
+              style={{
+                height: '80px',
+                maxWidth: '100%',
+                objectFit: 'contain',
+                margin: '0 auto',
               }}
-              breakpoints={{
-                640: {
-                  slidesPerView: 3,
-                  spaceBetween: 60,
-                },
-                768: {
-                  slidesPerView: 4,
-                  spaceBetween: 70,
-                },
-                1024: {
-                  slidesPerView: 5,
-                  spaceBetween: 80,
-                },
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src =
+                  'https://via.placeholder.com/150x80?text=Logo';
               }}
-              className="swiper-container"
-            >
-              {partners.map((partner) => (
-                <SwiperSlide key={partner.id}>
-                  <div className="partner-item" data-aos="fade-up" style={{
-                    padding: '20px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    height: '150px'
-                  }}>
-                    {/* Fixed logo container with proper background and styling */}
-                    <div className="partner-logo hover-up-down" style={{
-                      width: '100%',
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      background: 'rgba(255, 255, 255, 0.9)',
-                      borderRadius: '15px',
-                      padding: '15px',
-                      boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
-                      transition: 'all 0.3s ease'
-                    }}>
-                      {/* Fixed image styling without invert filter */}
-                      <img 
-                        src={partner.image} 
-                        alt={partner.name} 
-                        style={{
-                          height: '80px',
-                          maxWidth: '100%',
-                          objectFit: 'contain',
-                          margin: '0 auto'
-                        }}
-                        onError={(e) => {
-                          e.currentTarget.onerror = null;
-                          e.currentTarget.src = "https://via.placeholder.com/150x80?text=Logo";
-                        }}
-                      />
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+            />
           </div>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+
         </div>
       </section>
       
@@ -164,19 +171,20 @@ export default function BlueClient() {
         /* Make sure the swiper container is visible */
         .swiper-container {
           overflow: visible !important;
+          padding: 0 !important;
+          margin: 0 -25px !important;
+          width: calc(100% + 50px) !important;
         }
         
-        /* Ensure swiper navigation is visible */
-        .swiper-button-next,
-        .swiper-button-prev {
-          color: white !important;
-          background: rgba(0, 122, 255, 0.5);
-          width: 40px !important;
-          height: 40px !important;
-          border-radius: 50%;
-          display: flex !important;
+        .swiper-wrapper {
+          display: flex;
           align-items: center;
-          justify-content: center;
+        }
+        
+        /* Ensure all slides are visible */
+        .swiper-slide {
+          opacity: 1 !important;
+          visibility: visible !important;
         }
         
         @media (max-width: 767px) {
