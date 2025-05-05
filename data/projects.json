@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "title": "Heat Tracing Panel",
+      "shortDescription": "ATEX & IECEx certified Heat Tracing Panel designed for Zone 1 and Zone 2 hazardous areas, featuring Ex d enclosures, temperature-controlled circuits, real-time monitoring, and leakage protection.",
+      "category": "Oil & Gas",
+      "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/clipboard.webp"
+    },
+    {
+      "id": 2,
+      "title": "Cast Iron Flameproof Panel",
+      "shortDescription": "ATEX & IECEx certified Cast Iron Flameproof Panel engineered for Zone 1 and Zone 21 offshore hazardous areas, offering robust IP66 ingress protection and corrosion resistance ideal for H₂S environments.",
+      "category": "Offshore",
+      "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/clipboard-1.webp"
+    },
+    {
+      "id": 3,
+      "title": "Ex de Socket DB",
+      "shortDescription": "ATEX & IECEx certified Ex de Socket Distribution Panel designed for Oil & Gas maintenance applications in Zone 1 hazardous areas, built with Ex d Aluminium and Ex de GRP sockets, featuring spare feeders for future expansion.",
+      "category": "Electrical Distribution",
+      "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/Socket-DB-R3.webp"
+    },
+    {
+      "id": 4,
+      "title": "Ex d DB with 125A Socket Inlet",
+      "shortDescription": "ATEX & IECEx certified Ex d Distribution Board featuring a 125A Ex de GRP socket inlet with an inbuilt changeover switch for seamless power source transition, mounted on HDGS frame for rugged offshore reliability.",
+      "category": "Power Distribution",
+      "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/Ex-DB-R3.webp"
+    },
+    {
+      "id": 5,
+      "title": "IP66 SAFE AREA PANEL",
+      "shortDescription": "IP66 rated Motor Control Panel tailored for deployment in marine environments, featuring anti-corrosive Stainless Steel SS 316L enclosures and dedicated cable tray for comprehensive protection.",
+      "category": "Marine & Industrial",
+      "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/FOAM-1-R3-768x576-1.webp"
+    },
+    {
+      "id": 6,
+      "title": "Refinery Control Systems",
+      "shortDescription": "Advanced explosion-proof control systems designed for major petroleum refineries, ensuring reliable operation under extreme industrial conditions.",
+      "category": "Refinery",
+      "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/Safe-Area-IP66-R4-2.webp"
+    }
+  ]

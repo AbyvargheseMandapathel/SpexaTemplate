@@ -49,7 +49,7 @@ export default function Home12() {
 				{/* <Section3 /> */}
 				<Services />
 				{/* <Products /> */}
-				{/* <Projects /> */}
+				<Projects />
 				{/* <Section7 /> */}
 				{/*<Section6 />
 				<Section7 />
