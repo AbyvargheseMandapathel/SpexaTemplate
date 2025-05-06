@@ -85,6 +85,7 @@ Table of contents
 	--tc-theme-bg-14: #f1f5ff;
 	--tc-theme-bg-15: #f4f4ff;
 	--tc-theme-bg-16: #f8f8f8;
+	--tc-theme-bg-blue-text : #4da6ff;
 	--tc-theme-text: rgba(0, 7, 11, 0.7607843137);
 	--tc-theme-text-2: rgba(0, 7, 11, 0.8);
 	--tc-theme-text-3: rgba(255, 255, 255, 0.6);
@@ -95,6 +96,7 @@ Table of contents
 	--tc-theme-border-2: rgba(186, 204, 214, 0.631372549);
 	--tc-theme-border-3: #e7eaf1;
 	--tc-theme-border-4: rgba(0, 4, 7, 0.3568627451);
+	--tc-theme-bg-blue-bg : rgba(0,102,204,.2)
 	--tc-theme-border-5: #bca3ea;
 	--tc-theme-border-6: #d9d9d9;
 	--tc-theme-border-7: #e3e3e3;
@@ -19992,3 +19994,35 @@ textarea.form-control {
 	text-decoration-color: var(--tc-primary-1300);
 }
 
+
+.btn-blue-sm {
+	padding: 8px 12px;
+	background-color: var(--tc-primary-1300);
+	border-radius: 4px;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+	color: var(--tc-theme-bg-blue-text);
+	font-family: var(--rubik);
+	transition: all 0.3s ease; /* Smooth transition for hover effect */
+
+}
+
+.btn-blue-sm:hover {
+  background-color: var(--tc-theme-bg-blue-text); /* White background on hover */
+  color: var(--tc-theme-bg-blue-bg); /* Blue text on hover */
+}
+
+.form-newsletter .btn-blue-newsletter {
+	height: 50px;
+	width: 55px;
+	background-color: var(--tc-primary-1300);
+	background-image: url(../imgs/template/icons/icon-submit.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 8px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 2;
+}

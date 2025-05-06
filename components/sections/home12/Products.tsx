@@ -49,8 +49,8 @@ export default function Products() {
           {/* Product Filter Tabs */}
           <div className="row mb-40">
             <div className="col-12">
-              <div className="product-filter text-center">
-                <ul className="nav nav-tabs border-0 d-inline-flex" role="tablist">
+              <div className="product-filter text-center sticky-tabs">
+                <ul className="nav nav-tabs border-0 d-flex flex-wrap justify-content-center" role="tablist">
                   {categories.map((category) => (
                     <li key={category} className="nav-item">
                       <button
@@ -61,7 +61,7 @@ export default function Products() {
                           background: activeTab === category ? 'rgba(0, 102, 204, 0.2)' : 'transparent',
                           padding: '8px 20px',
                           borderRadius: '30px',
-                          margin: '0 5px',
+                          margin: '5px',
                           transition: 'all 0.3s ease'
                         }}
                       >
@@ -89,7 +89,7 @@ export default function Products() {
                       />
                     </div>
                     <div className="card-overlay">
-                      <Link href={`/products/${product.id}`} className="btn btn-white-sm">
+                      <Link href={`/products/${product.id}`} className="btn btn-blue-sm">
                         View Product
                       </Link>
                     </div>
@@ -98,7 +98,7 @@ export default function Products() {
                     <span className="badge bg-blue-light mb-10">{product.category}</span>
                     <h4 className="color-white mb-10">{product.title}</h4>
                     {product.shortDescription && (
-                      <p className="paragraph-rubik-r gray-100 mb-0 description" style={{ color: 'white' }}>
+                      <p className="paragraph-rubik-r gray-100 mb-0 description clamp-text" style={{ color: 'white' }}>
                         {product.shortDescription}
                       </p>
                     )}
@@ -110,7 +110,7 @@ export default function Products() {
 
           {/* View All Button */}
           <div className="text-center mt-40">
-            <Link href="/projects" className="btn-blue-home none-bd bdrd-10">
+            <Link href="/products" className="btn-blue-home none-bd bdrd-10">
               <span>View All Products</span>
               <span className="btn-hover-effect"></span>
             </Link>
@@ -173,13 +173,12 @@ export default function Products() {
           color: white !important;
           flex: 0 0 auto;
         }
-        .description {
+        .description.clamp-text {
           display: -webkit-box;
-          -webkit-line-clamp: 3;
+          -webkit-line-clamp: 2; /* Show only 2 lines */
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-overflow: ellipsis;
-          height: 60px; /* Adjust height as needed */
         }
         .badge {
           font-size: 12px;
@@ -217,12 +216,18 @@ export default function Products() {
         }
         @media (max-width: 768px) {
           .product-filter .nav-tabs {
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            padding-bottom: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
           }
           .product-filter .nav-item {
-            white-space: nowrap;
+            margin: 5px;
+          }
+          .sticky-tabs {
+            position: sticky;
+            top: 0;
+            background: #001b2b;
+            z-index: 1000;
+            padding: 10px 0;
           }
         }
       `}</style>

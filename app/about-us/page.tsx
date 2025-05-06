@@ -6,6 +6,13 @@ import Link from "next/link"
 import { Swiper, SwiperSlide } from "swiper/react"
 export default function AboutUs() {
 
+	const bannerItems = [
+		"OUR MISSION",
+		"OUR VISION",
+		"OUR VALUES",
+		"OUR TEAM"
+	  ];
+
 	return (
 		<>
 
@@ -445,7 +452,6 @@ export default function AboutUs() {
 						</div>
 					</div>
 				</section>
-
 
 			</Layout >
 		</>

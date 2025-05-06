@@ -1,7 +1,6 @@
 'use client'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import { motion } from 'framer-motion';
 
 export default function BlueClient() {
   const partners = [
@@ -20,6 +19,7 @@ export default function BlueClient() {
   return (
     <>
       <section className="position-relative overflow-hidden box-latest-blog-3 box-services-12" style={{
+        backgroundColor: '#e0f7fa', // Light blue background color
         backgroundImage: `url(https://spexaelectrical.androfork.com/wp-content/uploads/2025/03/slide-1-67d12caced734.webp)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -39,7 +39,7 @@ export default function BlueClient() {
           filter: 'blur(8px)',
           zIndex: 0
         }}></div>
-        
+
         {/* Color overlay with solid color */}
         <div className="color-overlay" style={{
           position: 'absolute',
@@ -51,7 +51,7 @@ export default function BlueClient() {
           opacity: 0.8,
           zIndex: 1
         }}></div>
-        
+
         <div className="container position-relative" style={{ zIndex: 3 }} data-aos="fade-up">
           <div className="row position-relative align-items-end">
             <div className="col-lg-7 mb-4 text-center text-lg-start">
@@ -64,98 +64,97 @@ export default function BlueClient() {
           </div>
 
           <div className="max-w-[1320px] mx-auto px-4 overflow-hidden">
-  <Swiper
-    modules={[Autoplay]}
-    spaceBetween={20}
-    slidesPerView={2}
-    loop={true}
-    autoplay={{
-      delay: 2500,
-      disableOnInteraction: false,
-    }}
-    breakpoints={{
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 4,
-        spaceBetween: 24,
-      },
-      1024: {
-        slidesPerView: 5,
-        spaceBetween: 24,
-      },
-    }}
-    className="swiper-container"
-  >
-    {partners.map((partner) => (
-      <SwiperSlide key={partner.id}>
-        <div
-          className="partner-item"
-          data-aos="fade-up"
-          style={{
-            padding: '20px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '150px',
-          }}
-        >
-          <div
-            className="partner-logo hover-up-down"
-            style={{
-              width: '100%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              background: 'rgba(255, 255, 255, 0.9)',
-              borderRadius: '15px',
-              padding: '15px',
-              boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
-              transition: 'all 0.3s ease',
-            }}
-          >
-            <img
-              src={partner.image}
-              alt={partner.name}
-              style={{
-                height: '80px',
-                maxWidth: '100%',
-                objectFit: 'contain',
-                margin: '0 auto',
+            <Swiper
+              modules={[Autoplay]}
+              spaceBetween={20}
+              slidesPerView={2}
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
               }}
-              onError={(e) => {
-                e.currentTarget.onerror = null;
-                e.currentTarget.src =
-                  'https://via.placeholder.com/150x80?text=Logo';
+              breakpoints={{
+                640: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 4,
+                  spaceBetween: 24,
+                },
+                1024: {
+                  slidesPerView: 5,
+                  spaceBetween: 24,
+                },
               }}
-            />
+              className="swiper-container"
+            >
+              {partners.map((partner) => (
+                <SwiperSlide key={partner.id}>
+                  <div
+                    className="partner-item"
+                    data-aos="fade-up"
+                    style={{
+                      padding: '20px',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      height: '150px',
+                    }}
+                  >
+                    <div
+                      className="partner-logo hover-up-down"
+                      style={{
+                        width: '100%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        background: 'rgba(255, 255, 255, 0.9)',
+                        borderRadius: '15px',
+                        padding: '15px',
+                        boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
+                        transition: 'all 0.3s ease',
+                      }}
+                    >
+                      <img
+                        src={partner.image}
+                        alt={partner.name}
+                        style={{
+                          height: '80px',
+                          maxWidth: '100%',
+                          objectFit: 'contain',
+                          margin: '0 auto',
+                        }}
+                        onError={(e) => {
+                          e.currentTarget.onerror = null;
+                          e.currentTarget.src =
+                            'https://via.placeholder.com/150x80?text=Logo';
+                        }}
+                      />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</div>
-
-        </div>
       </section>
-      
+
       <style jsx global>{`
         :root {
           --swiper-theme-color: #007aff;
         }
-        
+
         .partner-logo:hover {
           transform: translateY(-10px);
           box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
           background: rgba(255, 255, 255, 1) !important;
         }
-        
+
         .hover-up-down {
           animation: float 6s ease-in-out infinite;
         }
-        
+
         @keyframes float {
           0% {
             transform: translateY(0px);
@@ -167,7 +166,7 @@ export default function BlueClient() {
             transform: translateY(0px);
           }
         }
-        
+
         /* Make sure the swiper container is visible */
         .swiper-container {
           overflow: visible !important;
@@ -175,41 +174,41 @@ export default function BlueClient() {
           margin: 0 -25px !important;
           width: calc(100% + 50px) !important;
         }
-        
+
         .swiper-wrapper {
           display: flex;
           align-items: center;
         }
-        
+
         /* Ensure all slides are visible */
         .swiper-slide {
           opacity: 1 !important;
           visibility: visible !important;
         }
-        
+
         @media (max-width: 767px) {
           .partner-logo {
             padding: 15px !important;
           }
-          
+
           .partner-item {
             height: 120px !important;
           }
-          
+
           .partner-logo img {
             height: 60px !important;
           }
         }
-        
+
         @media (max-width: 575px) {
           .partner-logo {
             padding: 10px !important;
           }
-          
+
           .partner-item {
             height: 100px !important;
           }
-          
+
           .partner-logo img {
             height: 50px !important;
           }

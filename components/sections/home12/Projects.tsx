@@ -49,8 +49,8 @@ export default function Projects() {
           {/* Project Filter Tabs */}
           <div className="row mb-40">
             <div className="col-12">
-              <div className="project-filter text-center">
-                <ul className="nav nav-tabs border-0 d-inline-flex" role="tablist">
+              <div className="project-filter text-center sticky-tabs">
+                <ul className="nav nav-tabs border-0 d-flex flex-wrap justify-content-center" role="tablist">
                   {categories.map((category) => (
                     <li key={category} className="nav-item">
                       <button
@@ -61,7 +61,7 @@ export default function Projects() {
                           background: activeTab === category ? 'rgba(0, 102, 204, 0.2)' : 'transparent',
                           padding: '8px 20px',
                           borderRadius: '30px',
-                          margin: '0 5px',
+                          margin: '5px',
                           transition: 'all 0.3s ease'
                         }}
                       >
@@ -87,8 +87,8 @@ export default function Projects() {
                       style={{ height: '300px', objectFit: 'cover' }} // Ensure uniform image size
                     />
                     <div className="card-overlay">
-                      <Link href={`/projects/${project.id}`} className="btn btn-white-sm">
-                        View Project
+                    <Link href={`/products/${project.id}`} className="btn btn-blue-sm">
+                    View Project
                       </Link>
                     </div>
                   </div>
@@ -96,7 +96,7 @@ export default function Projects() {
                     <span className="badge bg-blue-light mb-10">{project.category}</span>
                     <h4 className="color-white mb-10">{project.title}</h4>
                     {project.shortDescription && (
-                      <p className="paragraph-rubik-r gray-100 mb-0" style={{ color: 'white' }}>
+                      <p className="paragraph-rubik-r gray-100 mb-0 description clamp-text" style={{ color: 'white' }}>
                         {project.shortDescription}
                       </p>
                     )}
@@ -153,6 +153,13 @@ export default function Projects() {
           background: rgba(0, 27, 43, 0.8);
           color: white !important;
         }
+        .description.clamp-text {
+          display: -webkit-box;
+          -webkit-line-clamp: 2; /* Show only 2 lines */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
         .badge {
           font-size: 12px;
           font-weight: 600;
@@ -189,12 +196,18 @@ export default function Projects() {
         }
         @media (max-width: 768px) {
           .project-filter .nav-tabs {
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            padding-bottom: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
           }
           .project-filter .nav-item {
-            white-space: nowrap;
+            margin: 5px;
+          }
+          .sticky-tabs {
+            position: sticky;
+            top: 0;
+            background: #001b2b;
+            z-index: 1000;
+            padding: 10px 0;
           }
         }
       `}</style>
