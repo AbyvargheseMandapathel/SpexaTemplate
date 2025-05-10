@@ -27,7 +27,7 @@ export default function AboutUs() {
       />
       
       {/* Company values section */}
-      <ValuesSection values={aboutUsData.values} />
+      {/* <ValuesSection values={aboutUsData.values} /> */}
       
       {/* Client testimonials section */}
       <ClientTestimonialsSection testimonials={aboutUsData.clientTestimonials} />

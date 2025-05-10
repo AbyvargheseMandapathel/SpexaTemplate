@@ -1,35 +1,62 @@
 {
-    "aboutUs": {
-      "title": "About Us",
-      "description": "Spexa Electricals is a trusted provider of a comprehensive selection of explosion-proof products and services, catering to the specific needs of the oil and gas industry. Our commitment to delivering exceptional solutions and support remains unwavering, empowering our esteemed customers to achieve their goals effectively. Drawing upon our extensive experience in the field, we have earned a reputation as the leading experts in explosion-proof technology within our region. Our dedication to excellence sets us apart and ensures that our customers receive unparalleled quality and expertise in every aspect of our offerings. As an ISO 9001 – 2008 certified company, we adhere to stringent quality management systems, ensuring that our products and services consistently meet or exceed industry standards. We continuously strive to improve our processes and maintain the highest level of customer satisfaction.",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/11/New-Project-1.jpg"
+  "aboutUs": {
+    "title": "About Us",
+    "description": "Spexa Electricals is a trusted provider of a comprehensive selection of explosion-proof products and services, catering to the specific needs of the oil and gas industry. Our commitment to delivering exceptional solutions and support remains unwavering, empowering our esteemed customers to achieve their goals effectively. Drawing upon our extensive experience in the field, we have earned a reputation as the leading experts in explosion-proof technology within our region. Our dedication to excellence sets us apart and ensures that our customers receive unparalleled quality and expertise in every aspect of our offerings. As an ISO 9001 – 2008 certified company, we adhere to stringent quality management systems, ensuring that our products and services consistently meet or exceed industry standards. We continuously strive to improve our processes and maintain the highest level of customer satisfaction.",
+    "image": "https://spexaelectrical.com/wp-content/uploads/2023/11/New-Project-1.jpg "
+  },
+  "values": [
+    {
+      "title": "Leadership",
+      "icon": "fas fa-bullseye",
+      "description": "As a leader in the industry, we are committed to staying ahead of the curve. We continuously adapt to the evolving needs of our customers and seize new opportunities in the market."
     },
-    "values": [
-      {
-        "title": "Leadership",
-        "description": "As a leader in the industry, we are committed to staying ahead of the curve. We continuously adapt to the evolving needs of our customers and seize new opportunities in the market. By choosing SPEXA Electrical, you can expect to benefit from the latest services, technologies, and developments in the industry."
-      },
-      {
-        "title": "Continuous Learning",
-        "description": "We enhance our expertise and ensure that we can offer you the most up-to-date and reliable solutions for your specific requirements. We understand the critical importance of safety and compliance in hazardous environments, and we strive to provide you with cutting-edge solutions that align with the latest industry standards."
-      },
-      {
-        "title": "Customer Relations",
-        "description": "We place our customers at the forefront of our business. Your satisfaction is our top priority, and we are committed to going the extra mile to meet and exceed your expectations. Superior customer service is a fundamental aspect of our company, and we take pride in serving you diligently."
-      },
-      {
-        "title": "Industry Insights",
-        "description": "By closely following industry trends and developments, we gain valuable insights into emerging technologies, regulatory changes, and best practices. Our deep understanding of hazardous environments allows us to anticipate challenges and recommend solutions that mitigate risks and ensure compliance."
-      },
-      {
-        "title": "Problem Solving",
-        "description": "Hazardous environments can present complex challenges that require specialized solutions. Our team's expertise equips us with the skills to analyze and solve intricate problems related to hazardous areas. We approach each project with a problem-solving mindset, ensuring that we deliver solutions that address your specific challenges effectively."
-      },
-      {
-        "title": "Tailored Solutions",
-        "description": "With our extensive knowledge and expertise, we can provide customized solutions that are specifically tailored to your unique requirements. We take into account factors such as the nature of your operations, the specific hazards involved, and any regulatory considerations. This ensures that the solutions we offer are the most effective and reliable for your specific needs."
-      }
-    ],
-    "clientTestimonials": []
+    {
+      "title": "Continuous Learning",
+      "icon": "fas fa-book-reader",
+      "description": "We enhance our expertise and ensure that we can offer you the most up-to-date and reliable solutions for your specific requirements."
+    },
+    {
+      "title": "Customer Relations",
+      "icon": "fas fa-handshake",
+      "description": "We place our customers at the forefront of our business. Your satisfaction is our top priority, and we are committed to going the extra mile to meet and exceed your expectations."
+    },
+    {
+      "title": "Industry Insights",
+      "icon": "fas fa-chart-line",
+      "description": "By closely following industry trends and developments, we gain valuable insights into emerging technologies, regulatory changes, and best practices."
+    },
+    {
+      "title": "Problem Solving",
+      "icon": "fas fa-wrench",
+      "description": "Hazardous environments can present complex challenges that require specialized solutions. Our team's expertise equips us with the skills to analyze and solve intricate problems related to hazardous areas."
+    },
+    {
+      "title": "Tailored Solutions",
+      "icon": "fas fa-cogs",
+      "description": "With our extensive knowledge and expertise, we can provide customized solutions that are specifically tailored to your unique requirements."
+    }
+  ],
+  "clientTestimonials": [
+  {
+    "name": "R&M SN ELECTRICAL FZCO",
+    "position": "Manager -Procurement.",
+    "comment": "SPEXA Electricals have developed a strong relationship with R&M SN Electrical FZCO over many years of working closely together, as they continue to support us with our project supply requirements. It is clear to see that all the staff at SPEXA share the same enthusiasm and professionalism within their individual role which makes them, as a company, a pleasure to work with. Be it our urgent ex-stock requirements or complicated Project DB Enquiries, SPEXA Team is willing to work whole-heartedly as partners throughout the pre-order, post order & project execution phase. Special mention to their Account managers, Technical Engineering team, QC and Logistics teams for their collaborative effort that has ensured materials are ordered according to enduser specification and smooth & timely delivery is always achieved. Thus, SPEXA and R&M SN Electrical FZCO has developed smooth rapport and we are looking forward to work together for many years to come.",
+    "image": "/assets/imgs/pages/home2/author.png",
+    "rating": 5
+  },
+  {
+    "name": "Robert Johnson",
+    "position": "Operations Manager",
+    "comment": "Working with Spexa Electricals has been a game-changer for our oil and gas operations. Their tailored solutions and responsive support team have exceeded our expectations.",
+    "image": "/assets/imgs/pages/home2/author2.png",
+    "rating": 4
+  },
+  {
+    "name": "Sarah Williams",
+    "position": "Safety Director",
+    "comment": "The quality of Spexa's explosion-proof products is outstanding. Their team's knowledge and attention to detail have helped us implement safer systems throughout our facilities.",
+    "image": "/assets/imgs/pages/home2/author3.png",
+    "rating": 5
   }
-  
+]
+}
