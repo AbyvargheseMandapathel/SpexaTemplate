@@ -30,7 +30,7 @@ export default function AboutUs() {
       {/* <ValuesSection values={aboutUsData.values} /> */}
       
       {/* Client testimonials section */}
-      <ClientTestimonialsSection testimonials={aboutUsData.clientTestimonials} />
+      {/* <ClientTestimonialsSection testimonials={aboutUsData.clientTestimonials} /> */}
     </Layout>
   );
 }
