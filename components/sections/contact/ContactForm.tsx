@@ -143,12 +143,6 @@ export default function ContactForm() {
                   transition: 'all 0.3s ease'
                 }}
               >
-                <svg className="me-2" width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clipPath="url(#clip0_4249_28840)">
-                    <path d="M8.75 17.6113V22.2493C8.75 22.5733 8.958 22.8603 9.266 22.9623..." fill="white" />
-                    <path d="M23.685 0.139089C23.455 -0.0239114 23.153 -0.0459114 22.903 0.0850886..." fill="white" />
-                  </g>
-                </svg>
                 GET IN TOUCH
               </button>
             </div>
