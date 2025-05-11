@@ -2,27 +2,23 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-interface ProjectDetailProps {
+interface ProductDetailProps {
   id: string;
   title: string;
   description: string;
   images: string[];
   category: string;
-  client: string;
-  date: string;
-  location: string;
+  specifications: string[];
   technologies?: string[];
 }
 
-const ProjectDetail: React.FC<ProjectDetailProps> = ({
+const ProductDetail: React.FC<ProductDetailProps> = ({
   id,
   title,
   description,
   images,
   category,
-  client,
-  date,
-  location,
+  specifications,
   technologies
 }) => {
   const [mainImage, setMainImage] = useState(images[0]);
@@ -39,8 +35,8 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
       <div className="container" data-aos="fade-up">
         <div className="row">
           <div className="col-lg-8">
-            <div className="project-detail-content">
-              <div className="project-gallery mb-5">
+            <div className="product-detail-content">
+              <div className="product-gallery mb-5">
                 <div className="main-image mb-4">
                   <img src={mainImage} alt={title} className="img-fluid rounded" style={{ maxHeight: '400px', width: '100%', objectFit: 'cover' }} />
                 </div>
@@ -78,7 +74,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
               
               <h2 className="heading-2xl mb-4" style={{ color: '#ffffff' }}>{title}</h2>
               
-              <div className="project-description mb-5">
+              <div className="product-description mb-5">
                 {description.split('\n').map((paragraph, index) => (
                   <p key={index} className="paragraph-rubik-r mb-3" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>{paragraph}</p>
                 ))}
@@ -87,31 +83,35 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
           </div>
           
           <div className="col-lg-4">
-            <div className="project-sidebar" style={{
+            <div className="product-sidebar" style={{
               padding: '30px',
               borderRadius: '12px',
               backgroundColor: 'rgba(255, 255, 255, 0.05)',
               border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
-              <h4 className="heading-lg mb-4" style={{ color: '#ffffff' }}>Project Information</h4>
+              <h4 className="heading-lg mb-4" style={{ color: '#ffffff' }}>Product Information</h4>
               
               <ul className="list-unstyled">
                 <li className="mb-3">
                   <strong className="d-block mb-1" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>Category:</strong>
                   <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{category}</span>
                 </li>
-                <li className="mb-3">
-                  <strong className="d-block mb-1" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>Client:</strong>
-                  <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{client}</span>
-                </li>
-                <li className="mb-3">
-                  <strong className="d-block mb-1" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>Date:</strong>
-                  <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{date}</span>
-                </li>
-                <li className="mb-3">
-                  <strong className="d-block mb-1" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>Location:</strong>
-                  <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{location}</span>
-                </li>
+                
+                {specifications.length > 0 && (
+                  <li className="mb-3">
+                    <strong className="d-block mb-1" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>Specifications:</strong>
+                    <ul style={{ 
+                      color: 'rgba(255, 255, 255, 0.7)',
+                      paddingLeft: '20px',
+                      marginBottom: '0'
+                    }}>
+                      {specifications.map((spec, index) => (
+                        <li key={index}>{spec}</li>
+                      ))}
+                    </ul>
+                  </li>
+                )}
+                
                 {technologies && technologies.length > 0 && (
                   <li className="mb-3">
                     <strong className="d-block mb-1" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>Technologies:</strong>
@@ -146,13 +146,13 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
               </div>
             </div>
             
-            <div className="related-projects mt-4" style={{
+            <div className="related-products mt-4" style={{
               padding: '30px',
               borderRadius: '12px',
               backgroundColor: 'rgba(255, 255, 255, 0.05)',
               border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
-              <h4 className="heading-lg mb-4" style={{ color: '#ffffff' }}>Share This Project</h4>
+              <h4 className="heading-lg mb-4" style={{ color: '#ffffff' }}>Share This Product</h4>
               <div className="d-flex gap-3">
                 <a href="#" className="social-icon" style={{
                   width: '40px',
@@ -223,4 +223,4 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
   );
 };
 
-export default ProjectDetail;
+export default ProductDetail;
