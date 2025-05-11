@@ -1,16 +1,20 @@
 'use client'
 import Link from 'next/link'
-import { SetStateAction, useState } from 'react'
+import { SetStateAction, useState, useEffect } from 'react'
 import projectsData from '../../../data/projects.json'
 
-export default function Projects() {
+export default function Projects({ isHomePage = true }) {
   const [activeTab, setActiveTab] = useState('all')
+  const [visibleItems, setVisibleItems] = useState(6)
+  const [hasMore, setHasMore] = useState(true)
 
   // Extract unique categories from projectsData
   const categories = ['all', ...new Set(projectsData.map((project) => project.category.toLowerCase()))]
 
   const handleTabChange = (tab: SetStateAction<string>) => {
     setActiveTab(tab)
+    setVisibleItems(6) // Reset visible items when changing tab
+    setHasMore(true) // Reset hasMore state
   }
 
   // Filter projects based on active tab
@@ -19,6 +23,25 @@ export default function Projects() {
       activeTab === 'all' ||
       project.category.toLowerCase() === activeTab
   )
+
+  // Visible projects based on current limit
+  const visibleProjects = filteredProjects.slice(0, visibleItems)
+
+  // Load more handler
+  const handleLoadMore = () => {
+    const newVisibleItems = visibleItems + 6
+    setVisibleItems(newVisibleItems)
+    
+    // Check if we've reached the end
+    if (newVisibleItems >= filteredProjects.length) {
+      setHasMore(false)
+    }
+  }
+
+  // Check if there are more items to load when tab changes
+  useEffect(() => {
+    setHasMore(visibleItems < filteredProjects.length)
+  }, [filteredProjects, visibleItems])
 
   return (
     <>
@@ -76,7 +99,7 @@ export default function Projects() {
 
           {/* Render Projects Dynamically */}
           <div className="row">
-            {filteredProjects.map((project) => (
+            {visibleProjects.map((project) => (
               <div key={project.id} className="col-lg-4 col-md-6 mb-30">
                 <div className="card-project-12" data-aos="fade-up" data-aos-delay="100">
                   <div className="card-image">
@@ -106,13 +129,54 @@ export default function Projects() {
             ))}
           </div>
 
-          {/* View All Button */}
-          <div className="text-center mt-40">
-            <Link href="/projects" className="btn-blue-home none-bd bdrd-10">
-              <span>View All Projects</span>
-              <span className="btn-hover-effect"></span>
-            </Link>
-          </div>
+          {/* Load More or End Message - Only show on dedicated pages */}
+          {!isHomePage && (
+            <div className="text-center mt-40">
+              {hasMore ? (
+                <button 
+                  onClick={handleLoadMore} 
+                  className="btn-blue-home none-bd bdrd-10"
+                  style={{
+                    background: '#0075DC',
+                    color: 'white',
+                    border: 'none',
+                    padding: '12px 30px',
+                    borderRadius: '10px',
+                    cursor: 'pointer',
+                    fontWeight: '600',
+                    transition: 'all 0.3s ease'
+                  }}
+                >
+                  <span>Load More</span>
+                  <span className="btn-hover-effect"></span>
+                </button>
+              ) : (
+                <p className="paragraph-rubik-r" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                  You have reached the end
+                </p>
+              )}
+            </div>
+          )}
+
+          {/* View All Button - Only show on home page */}
+          {isHomePage && (
+            <div className="text-center mt-40">
+              <Link href="/projects" className="btn-blue-home none-bd bdrd-10" style={{
+                background: '#0075DC',
+                color: 'white',
+                border: 'none',
+                padding: '12px 30px',
+                borderRadius: '10px',
+                display: 'inline-block',
+                textDecoration: 'none',
+                fontWeight: '600',
+                transition: 'all 0.3s ease'
+              }}>
+                <span>View All Projects</span>
+                <span className="btn-hover-effect"></span>
+              </Link>
+            </div>
+          )}
         </div>
       </section>
 

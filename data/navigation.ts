@@ -14,7 +14,7 @@ export const navigationItems = [
     {
       id: 3,
       title: "Services",
-      link: "#",
+      link: "/services",
       type: "dropdown",
       children: [
         { title: "Service 1", link: "/services-1" },

@@ -69,7 +69,7 @@ const DetailPage: React.FC<DetailPageProps> = ({
                 ))}
               </ul>
             </div>
-            <div className="text-end position-absolute" style={{ top: '50%', right: '15px', transform: 'translateY(-50%)' }}>
+            {/* <div className="text-end position-absolute" style={{ top: '50%', right: '15px', transform: 'translateY(-50%)' }}>
               <Link href="/contact" className="btn btn-primary" style={{
                 backgroundColor: '#0075DC',
                 borderColor: '#0075DC',
@@ -81,7 +81,7 @@ const DetailPage: React.FC<DetailPageProps> = ({
               }}>
                 Contact Us
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
