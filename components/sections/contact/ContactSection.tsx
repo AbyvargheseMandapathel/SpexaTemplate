@@ -15,7 +15,7 @@ export default function ContactSection() {
     >
       <div className="container" data-aos="fade-up">
       <h1 	className="heading-jakarta-55 dark-950 mb-5" 
-						style={{ color: '#fff !important' }}
+						style={{ color: '#ffffff !important' }}
 						>
 						Have Questions?<br />
 						Get in touch!

@@ -1,0 +1,39 @@
+{
+    "jobs": [
+      {
+        "title": "Electrical Design Engineer",
+        "responsibilities": [
+          "Design Electrical Systems.",
+          "Create schematics and technical documents.",
+          "Collaborate with cross-functional teams."
+        ],
+        "qualifications": [
+          "Bachelor’s degree in Electrical Engineering.",
+          "2+ years of electrical design experience.",
+          "Expertise in Electrical Panel manufacturing.",
+          "Proficiency in design software."
+        ],
+        "experienceRequired": "Minimum 2 Years",
+        "qualification": "Electrical Engineer",
+        "bannerLink": "https://spexaelectrical.com/wp-content/uploads/2023/09/Design-Engineer.jpeg"
+      },
+      {
+        "title": "QA QC Engineer",
+        "responsibilities": [
+          "Ensure the quality of electrical systems.",
+          "Create and implement QA/QC processes.",
+          "Collaborate with cross-functional teams.",
+          "Conduct inspections and audits."
+        ],
+        "qualifications": [
+          "Bachelor’s degree in Electrical Engineering.",
+          "2+ years of QA/QC experience.",
+          "Expertise in Electrical Panel manufacturing.",
+          "Proficiency in QA/QC software."
+        ],
+        "experienceRequired": "2 years",
+        "qualification": "Electrical Engineer",
+        "bannerLink": "https://spexaelectrical.com/wp-content/uploads/2023/09/QA-QC.jpg"
+      }
+    ]
+  }
