@@ -78,7 +78,12 @@ export default function JobDetailPage() {
         <div style={{ 
           background: '#001b2b',
           padding: '80px 0',
-          position: 'relative'
+          position: 'relative',
+          backgroundImage: `url(${job.bannerLink})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundBlendMode: 'overlay',
+          backgroundColor: 'rgba(0, 27, 43, 0.85)'
         }}>
           <div className="container position-relative">
             <div className="text-center">
