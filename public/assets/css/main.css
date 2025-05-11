@@ -20026,3 +20026,10 @@ textarea.form-control {
 	right: 5px;
 	z-index: 2;
 }
+
+.box-detail-single-banner-inner {
+	background-size: cover;
+	padding: 202px 0px;
+	position: relative;
+	background-color: #001b2b ;
+}

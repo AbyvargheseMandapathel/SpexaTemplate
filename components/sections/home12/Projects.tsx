@@ -87,7 +87,7 @@ export default function Projects() {
                       style={{ height: '300px', objectFit: 'cover' }} // Ensure uniform image size
                     />
                     <div className="card-overlay">
-                    <Link href={`/products/${project.id}`} className="btn btn-blue-sm">
+                    <Link href={`/projects/${project.id}`} className="btn btn-blue-sm">
                     View Project
                       </Link>
                     </div>

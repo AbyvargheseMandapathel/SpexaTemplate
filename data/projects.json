@@ -1,44 +1,104 @@
 [
-    {
-      "id": 1,
-      "title": "Heat Tracing Panel",
-      "shortDescription": "ATEX & IECEx certified Heat Tracing Panel designed for Zone 1 and Zone 2 hazardous areas, featuring Ex d enclosures, temperature-controlled circuits, real-time monitoring, and leakage protection.",
-      "category": "Oil & Gas",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/clipboard.webp"
-    },
-    {
-      "id": 2,
-      "title": "Cast Iron Flameproof Panel",
-      "shortDescription": "ATEX & IECEx certified Cast Iron Flameproof Panel engineered for Zone 1 and Zone 21 offshore hazardous areas, offering robust IP66 ingress protection and corrosion resistance ideal for H₂S environments.",
-      "category": "Offshore",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/clipboard-1.webp"
-    },
-    {
-      "id": 3,
-      "title": "Ex de Socket DB",
-      "shortDescription": "ATEX & IECEx certified Ex de Socket Distribution Panel designed for Oil & Gas maintenance applications in Zone 1 hazardous areas, built with Ex d Aluminium and Ex de GRP sockets, featuring spare feeders for future expansion.",
-      "category": "Electrical Distribution",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/Socket-DB-R3.webp"
-    },
-    {
-      "id": 4,
-      "title": "Ex d DB with 125A Socket Inlet",
-      "shortDescription": "ATEX & IECEx certified Ex d Distribution Board featuring a 125A Ex de GRP socket inlet with an inbuilt changeover switch for seamless power source transition, mounted on HDGS frame for rugged offshore reliability.",
-      "category": "Power Distribution",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/Ex-DB-R3.webp"
-    },
-    {
-      "id": 5,
-      "title": "IP66 SAFE AREA PANEL",
-      "shortDescription": "IP66 rated Motor Control Panel tailored for deployment in marine environments, featuring anti-corrosive Stainless Steel SS 316L enclosures and dedicated cable tray for comprehensive protection.",
-      "category": "Marine & Industrial",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/FOAM-1-R3-768x576-1.webp"
-    },
-    {
-      "id": 6,
-      "title": "Refinery Control Systems",
-      "shortDescription": "Advanced explosion-proof control systems designed for major petroleum refineries, ensuring reliable operation under extreme industrial conditions.",
-      "category": "Refinery",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/Safe-Area-IP66-R4-2.webp"
-    }
-  ]
+  {
+    "id": 1,
+    "title": "Heat Tracing Panel",
+    "shortDescription": "ATEX & IECEx certified Heat Tracing Panel designed for Zone 1 and Zone 2 hazardous areas, featuring Ex d enclosures, temperature-controlled circuits, real-time monitoring, and leakage protection.",
+    "category": "Oil & Gas",
+    "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/clipboard.webp",
+    "description": "We have successfully designed, manufactured, and delivered ATEX and IECEX certified power distribution boards for a prominent end user in Abu Dhabi. These explosion-proof panels boast certification for safe use in Zone 1 and Zone 21 hazardous areas, particularly catering to the unique challenges of powering various loads on an offshore rig platform. This panel boasts an impressive IP66 ingress protection rating, ensuring robust shielding against dust and water ingress. Additionally, it is designed to operate seamlessly within a wide ambient temperature range, spanning from -20 to +50 degree Celsius.\n\nThe Ex d certified Distribution Board (DB) is meticulously crafted from Stainless Steel SS 316L, featuring Ex d certified enclosures. These enclosures are expressly designed to withstand corrosive environments, especially those with H2S gas presence. Notably, H2S gas has a pronounced reactivity with Aluminum enclosures, making Cast Iron a more resilient alternative than Aluminum in H2S-rich environments. When compared to Stainless Steel enclosures, Cast Iron is more cost-effective, providing a durable and economical solution for environments prone to H2S exposure.\n\nThis panel holds the below certification,\n\nGas: II 2G Ex db IIB+H2 T5 Gb\nDust: II 2D Ex tb IIIC T100 C Db IP66\n\nOur design process was meticulous, aligning closely with the specific requirements and needs of the end user. We took into account the intricacies of the site conditions and adhered to any restrictions in place. This collaborative approach allowed us to create a robust solution tailored to the demands of the environment.\n\nThe panel is equipped with a marine-grade stainless steel mounting frame tailored for offshore conditions. This specialized frame, coated with marine paint, ensures durability and corrosion resistance in the challenging marine environment. Moreover, it includes a high-grade cable tray dedicated to efficient cable routing, further enhancing the panel’s suitability for offshore applications.\n\nWith a commitment to customer satisfaction, our prompt engineering support played a crucial role in meeting and exceeding our customer’s expectations while manufacturing this ATEX & IECEX certified panel. We are proud to have provided a high level of service, ensuring that the power distribution boards not only comply with rigorous safety standards but also perform reliably in the challenging offshore rig setting.",
+    "client": "Saudi Aramco",
+    "date": "March 2023",
+    "location": "Dammam, Saudi Arabia",
+    "technologies": ["Ex d Enclosures", "ATEX Certified", "IECEx Standards", "Temperature Control", "Real-time Monitoring"],
+    "images": [
+      "https://spexaelectrical.com/wp-content/uploads/2023/12/clipboard.webp",
+      "/assets/imgs/pages/project/detail.png",
+      "/assets/imgs/pages/project/img1.png"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Cast Iron Flameproof Panel",
+    "shortDescription": "ATEX & IECEx certified Cast Iron Flameproof Panel engineered for Zone 1 and Zone 21 offshore hazardous areas, offering robust IP66 ingress protection and corrosion resistance ideal for H₂S environments.",
+    "category": "Offshore",
+    "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/clipboard-1.webp",
+    "description": "ATEX & IECEx certified Cast Iron Flameproof Panel engineered for Zone 1 and Zone 21 offshore hazardous areas, offering robust IP66 ingress protection and corrosion resistance ideal for H₂S environments.\n\nOur Cast Iron Flameproof Panels are specifically designed for the harshest offshore environments where exposure to saltwater, hydrogen sulfide, and other corrosive elements is common. The robust construction ensures long-term reliability and safety in critical applications.",
+    "client": "ADNOC Offshore",
+    "date": "November 2022",
+    "location": "Abu Dhabi, UAE",
+    "technologies": ["Cast Iron Ex d", "IP66 Protection", "H₂S Resistance", "Zone 1/21 Certified", "Offshore Rated"],
+    "images": [
+      "https://spexaelectrical.com/wp-content/uploads/2023/12/clipboard-1.webp",
+      "/assets/imgs/pages/project/detail.png",
+      "/assets/imgs/pages/project/img1.png"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Ex de Socket DB",
+    "shortDescription": "ATEX & IECEx certified Ex de Socket Distribution Panel designed for Oil & Gas maintenance applications in Zone 1 hazardous areas, built with Ex d Aluminium and Ex de GRP sockets, featuring spare feeders for future expansion.",
+    "category": "Electrical Distribution",
+    "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/Socket-DB-R3.webp",
+    "description": "ATEX & IECEx certified Ex de Socket Distribution Panel designed for Oil & Gas maintenance applications in Zone 1 hazardous areas, built with Ex d Aluminium and Ex de GRP sockets, featuring spare feeders for future expansion.\n\nThese distribution panels provide safe and reliable power for maintenance activities in hazardous areas. The combination of Ex d enclosures with Ex de sockets ensures maximum safety while providing convenient access points for temporary equipment connections.",
+    "client": "Kuwait Oil Company",
+    "date": "August 2023",
+    "location": "Kuwait City, Kuwait",
+    "technologies": ["Ex d Aluminium", "Ex de GRP Sockets", "Spare Feeders", "Zone 1 Certified", "Maintenance-Friendly Design"],
+    "images": [
+      "https://spexaelectrical.com/wp-content/uploads/2023/12/Socket-DB-R3.webp",
+      "/assets/imgs/pages/project/detail.png",
+      "/assets/imgs/pages/project/img1.png"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Ex d DB with 125A Socket Inlet",
+    "shortDescription": "ATEX & IECEx certified Ex d Distribution Board featuring a 125A Ex de GRP socket inlet with an inbuilt changeover switch for seamless power source transition, mounted on HDGS frame for rugged offshore reliability.",
+    "category": "Power Distribution",
+    "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/Ex-DB-R3.webp",
+    "description": "ATEX & IECEx certified Ex d Distribution Board featuring a 125A Ex de GRP socket inlet with an inbuilt changeover switch for seamless power source transition, mounted on HDGS frame for rugged offshore reliability.\n\nThis specialized distribution board allows for quick and safe power source switching in hazardous environments. The hot-dip galvanized steel frame provides exceptional durability in offshore and coastal installations where corrosion resistance is critical.",
+    "client": "Qatar Petroleum",
+    "date": "February 2023",
+    "location": "Doha, Qatar",
+    "technologies": ["125A Socket Inlet", "Changeover Switch", "HDGS Frame", "Offshore Rated", "Ex d Certified"],
+    "images": [
+      "https://spexaelectrical.com/wp-content/uploads/2023/12/Ex-DB-R3.webp",
+      "/assets/imgs/pages/project/detail.png",
+      "/assets/imgs/pages/project/img1.png"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "IP66 SAFE AREA PANEL",
+    "shortDescription": "IP66 rated Motor Control Panel tailored for deployment in marine environments, featuring anti-corrosive Stainless Steel SS 316L enclosures and dedicated cable tray for comprehensive protection.",
+    "category": "Marine & Industrial",
+    "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/FOAM-1-R3-768x576-1.webp",
+    "description": "IP66 rated Motor Control Panel tailored for deployment in marine environments, featuring anti-corrosive Stainless Steel SS 316L enclosures and dedicated cable tray for comprehensive protection.\n\nDesigned specifically for marine applications, these panels withstand salt spray, high humidity, and other challenging conditions found in shipboard and coastal installations. The SS 316L construction provides superior corrosion resistance compared to standard stainless steel grades.",
+    "client": "Dubai Maritime City",
+    "date": "May 2023",
+    "location": "Dubai, UAE",
+    "technologies": ["IP66 Protection", "SS 316L Construction", "Marine Grade", "Cable Management", "Motor Control"],
+    "images": [
+      "https://spexaelectrical.com/wp-content/uploads/2023/12/FOAM-1-R3-768x576-1.webp",
+      "/assets/imgs/pages/project/detail.png",
+      "/assets/imgs/pages/project/img1.png"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Refinery Control Systems",
+    "shortDescription": "Advanced explosion-proof control systems designed for major petroleum refineries, ensuring reliable operation under extreme industrial conditions.",
+    "category": "Refinery",
+    "image": "https://spexaelectrical.com/wp-content/uploads/2023/12/Safe-Area-IP66-R4-2.webp",
+    "description": "Advanced explosion-proof control systems designed for major petroleum refineries, ensuring reliable operation under extreme industrial conditions.\n\nThese comprehensive control systems integrate multiple safety features and redundancies to maintain operational integrity in high-risk refinery environments. Each system is custom engineered to address the specific process requirements and hazardous area classifications of the installation site.",
+    "client": "Bahrain Petroleum Company",
+    "date": "October 2022",
+    "location": "Manama, Bahrain",
+    "technologies": ["Explosion-Proof Design", "Redundant Systems", "Process Control", "High Temperature Rated", "Remote Monitoring"],
+    "images": [
+      "https://spexaelectrical.com/wp-content/uploads/2023/12/Safe-Area-IP66-R4-2.webp",
+      "/assets/imgs/pages/project/detail.png",
+      "/assets/imgs/pages/project/img1.png"
+    ]
+  }
+]
