@@ -30,7 +30,7 @@ export default function Contact() {
 				{/* Contact Section 2 */}
 				<section className="box-section box-contact-section-2">
 					<div className="container" data-aos="fade-up">
-						<h1 className="heading-jakarta-55 dark-950 mb-5">
+						<h1 className="heading-jakarta-55 dark-950 mb-5 text-white">
 							Have Questions?<br />
 							Get in touch!
 						</h1>
