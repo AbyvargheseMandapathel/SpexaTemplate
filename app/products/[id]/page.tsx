@@ -79,18 +79,25 @@ export default function ProductDetailPage() {
 
   return (
     <Layout headerStyle={12} footerStyle={18}>
-      <div style={{ width: '100%' }}>
-        <DetailPage
+      {loading ? (
+        <div className="container mt-100 mb-100">
+          <div className="text-center">
+            <div className="spinner-border" style={{ color: '#0075DC' }} role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+      ) : product ? (
+        <DetailPage 
           title={product.title}
           breadcrumbItems={[
             { label: 'Home', link: '/' },
             { label: 'Products', link: '/products' },
             { label: product.title }
           ]}
-          backgroundColor="rgba(0, 27, 43, 0.85)"
           category={product.category}
         >
-          <ProductDetail
+          <ProductDetail 
             id={product.id.toString()}
             title={product.title}
             description={product.description || product.shortDescription}
@@ -98,9 +105,10 @@ export default function ProductDetailPage() {
             category={product.category}
             specifications={product.specifications || []}
             technologies={product.technologies || []}
+            modelPath={(product as any).modelPath} // Pass the modelPath to ProductDetail
           />
         </DetailPage>
-      </div>
+      ) : null}
     </Layout>
   );
 }

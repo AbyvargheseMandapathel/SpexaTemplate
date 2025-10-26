@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import ProductViewer3D from './ProductViewer3D';
 
 interface ProductDetailProps {
   id: string;
@@ -10,6 +11,7 @@ interface ProductDetailProps {
   category: string;
   specifications: string[];
   technologies?: string[];
+  modelPath?: string; // Add this new prop for 3D model path
 }
 
 const ProductDetail: React.FC<ProductDetailProps> = ({
@@ -19,9 +21,11 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
   images,
   category,
   specifications,
-  technologies
+  technologies,
+  modelPath
 }) => {
   const [mainImage, setMainImage] = useState(images[0]);
+  const [viewMode, setViewMode] = useState<'image' | '3d'>(modelPath ? '3d' : 'image');
 
   return (
     <section className="box-section" style={{
@@ -37,38 +41,70 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
           <div className="col-lg-8">
             <div className="product-detail-content">
               <div className="product-gallery mb-5">
-                <div className="main-image mb-4">
-                  <img src={mainImage} alt={title} className="img-fluid rounded" style={{ maxHeight: '400px', width: '100%', objectFit: 'cover' }} />
-                </div>
-                
-                {images.length > 1 && (
-                  <div className="thumbnail-gallery d-flex flex-wrap gap-2">
-                    {images.map((img, index) => (
-                      <div 
-                        key={index} 
-                        className="thumbnail-item" 
-                        onClick={() => setMainImage(img)}
-                        style={{ 
-                          cursor: 'pointer',
-                          border: mainImage === img ? '2px solid #0075DC' : '2px solid transparent',
-                          borderRadius: '8px',
-                          overflow: 'hidden',
-                          width: '80px',
-                          height: '60px'
-                        }}
-                      >
-                        <img 
-                          src={img} 
-                          alt={`${title} - image ${index + 1}`} 
-                          style={{ 
-                            width: '100%', 
-                            height: '100%', 
-                            objectFit: 'cover' 
-                          }} 
-                        />
-                      </div>
-                    ))}
+                {/* View mode toggle buttons */}
+                {modelPath && (
+                  <div className="view-mode-toggle d-flex mb-3">
+                    <button 
+                      className={`btn ${viewMode === 'image' ? 'btn-primary' : 'btn-outline-primary'} me-2`}
+                      onClick={() => setViewMode('image')}
+                    >
+                      2D View
+                    </button>
+                    <button 
+                      className={`btn ${viewMode === '3d' ? 'btn-primary' : 'btn-outline-primary'}`}
+                      onClick={() => setViewMode('3d')}
+                    >
+                      3D View
+                    </button>
                   </div>
+                )}
+                
+                {/* 3D Viewer */}
+                {viewMode === '3d' && modelPath && (
+                  <ProductViewer3D 
+                    modelPath={modelPath} 
+                    posterImage={images[0]} 
+                    alt={title} 
+                  />
+                )}
+                
+                {/* 2D Image Viewer */}
+                {viewMode === 'image' && (
+                  <>
+                    <div className="main-image mb-4">
+                      <img src={mainImage} alt={title} className="img-fluid rounded" style={{ maxHeight: '400px', width: '100%', objectFit: 'cover' }} />
+                    </div>
+                    
+                    {images.length > 1 && (
+                      <div className="thumbnail-gallery d-flex flex-wrap gap-2">
+                        {images.map((img, index) => (
+                          <div 
+                            key={index} 
+                            className="thumbnail-item" 
+                            onClick={() => setMainImage(img)}
+                            style={{ 
+                              cursor: 'pointer',
+                              border: mainImage === img ? '2px solid #0075DC' : '2px solid transparent',
+                              borderRadius: '8px',
+                              overflow: 'hidden',
+                              width: '80px',
+                              height: '60px'
+                            }}
+                          >
+                            <img 
+                              src={img} 
+                              alt={`${title} - image ${index + 1}`} 
+                              style={{ 
+                                width: '100%', 
+                                height: '100%', 
+                                objectFit: 'cover' 
+                              }} 
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
               

@@ -5,7 +5,8 @@
       "shortDescription": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments",
       "description": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments where the risk of explosion is present. These switches are constructed and certified to meet stringent safety standards, preventing them from becoming an ignition source in explosive atmospheres. They allow for the secure switching between power sources or circuits, ensuring the safe operation of electrical equipment in such high-risk areas.",
       "category": "Switches",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/09/EFSC22-600x600.webp"
+      "image": "https://spexaelectrical.com/wp-content/uploads/2023/09/EFSC22-600x600.webp",
+      "modelPath": "https://modelviewer.dev/shared-assets/models/Astronaut.glb"
     },
     {
       "id": 2,
