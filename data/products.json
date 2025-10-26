@@ -5,7 +5,7 @@
       "shortDescription": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments",
       "description": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments where the risk of explosion is present. These switches are constructed and certified to meet stringent safety standards, preventing them from becoming an ignition source in explosive atmospheres. They allow for the secure switching between power sources or circuits, ensuring the safe operation of electrical equipment in such high-risk areas.",
       "category": "Switches",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/09/EFSC22-600x600.webp",
+      "image": "https://spexaelectrical.com/media/categories/Screenshot2025-07-27171743_1.png",
       "modelPath": "https://modelviewer.dev/shared-assets/models/Astronaut.glb"
     },
     {
@@ -13,8 +13,9 @@
       "title": "Ex d Control Switches",
       "shortDescription": "Robust IP66 rated panel ideal for offshore rigs and H₂S environments.",
       "description": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments where the risk of explosion is present. These switches are constructed and certified to meet stringent safety standards, preventing them from becoming an ignition source in explosive atmospheres. They allow for the secure switching between power sources or circuits, ensuring the safe operation of electrical equipment in such high-risk areas.",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/09/EFSC22-600x600.webp",
-      "category": "Switches"
+      "image": "https://spexaelectrical.com/media/categories/Screenshot2025-07-27171743_1.png",
+      "category": "Switches",
+      "modelPath": "/assets/3d/car.glb"
     },
     {
       "id": 3,
@@ -22,14 +23,14 @@
       "shortDescription": "Plug-and-play socket DB designed for Oil & Gas maintenance in hazardous zones.",
       "description":"Ex Plug and Sockets:-Suitable for Various DC Voltages.:-Suitable for Various AC Voltages.:-Suitable for Various Frequencies.",
       "type": "Socket DBs",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/09/Plug-Socket-Sq-600x600.webp",
+      "image": "https://spexaelectrical.com/media/categories/Screenshot2025-07-27171743_1.png",
       "category": "Plug & Sockets"
     },
     {
       "id": 4,
       "title": "Adapters",
       "shortDescription": "High-capacity power distribution board with seamless source switching and marine-grade durability.",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/09/Adapters-2-600x600.jpg",
+      "image": "https://spexaelectrical.com/media/categories/Screenshot2025-07-27171743_1.png",
       "category": "Glands & Accessories"
     },
     {
@@ -37,7 +38,7 @@
       "title": "Blanking",
       "shortDescription": "Marine-grade stainless steel motor control unit with anti-corrosive cable tray system.",
       "type": "Control Panels",
-      "image": "https://spexaelectrical.com/wp-content/uploads/2023/09/BlankingStopping-Plugs.jpg",
+      "image": "https://spexaelectrical.com/media/categories/Screenshot2025-07-27171743_1.png",
       "category": "Glands & Accessories"
     },
     {
@@ -46,7 +47,7 @@
         "shortDescription": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments",
         "description": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments where the risk of explosion is present. These switches are constructed and certified to meet stringent safety standards, preventing them from becoming an ignition source in explosive atmospheres. They allow for the secure switching between power sources or circuits, ensuring the safe operation of electrical equipment in such high-risk areas.",
         "category": "Glands & Accessories",
-        "image": "https://spexaelectrical.com/wp-content/uploads/2023/09/5.-breather-drain-600x600.png"
+        "image": "https://spexaelectrical.com/media/categories/Screenshot2025-07-27171743_1.png"
       },
       
     {
@@ -55,7 +56,7 @@
         "shortDescription": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments",
         "description": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments where the risk of explosion is present. These switches are constructed and certified to meet stringent safety standards, preventing them from becoming an ignition source in explosive atmospheres. They allow for the secure switching between power sources or circuits, ensuring the safe operation of electrical equipment in such high-risk areas.",
         "category": "Glands & Accessories",
-        "image": "https://spexaelectrical.com/wp-content/uploads/2023/09/Asset-10-8.png"
+        "image": "https://spexaelectrical.com/media/categories/Screenshot2025-07-27171743_1.png"
       },
       
       
@@ -65,7 +66,7 @@
         "shortDescription": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments",
         "description": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments where the risk of explosion is present. These switches are constructed and certified to meet stringent safety standards, preventing them from becoming an ignition source in explosive atmospheres. They allow for the secure switching between power sources or circuits, ensuring the safe operation of electrical equipment in such high-risk areas.",
         "category": "Control Station/LCS",
-        "image": "https://spexaelectrical.com/wp-content/uploads/2023/09/LCS-2-300x300.webp"
+        "image": "https://spexaelectrical.com/media/categories/Screenshot2025-07-27171743_1.png"
       },
       
       
@@ -75,6 +76,6 @@
         "shortDescription": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments",
         "description": "Ex d Changeover switches refer to changeover or transfer switches specifically designed for use in hazardous environments where the risk of explosion is present. These switches are constructed and certified to meet stringent safety standards, preventing them from becoming an ignition source in explosive atmospheres. They allow for the secure switching between power sources or circuits, ensuring the safe operation of electrical equipment in such high-risk areas.",
         "category": "Control Station/LCS",
-        "image": "https://spexaelectrical.com/wp-content/uploads/2023/09/LCSs.webp"
+        "image": "https://spexaelectrical.com/media/categories/Screenshot2025-07-27171743_1.png"
       }
   ]
