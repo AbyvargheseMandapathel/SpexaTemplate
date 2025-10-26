@@ -24,7 +24,8 @@
       "description":"Ex Plug and Sockets:-Suitable for Various DC Voltages.:-Suitable for Various AC Voltages.:-Suitable for Various Frequencies.",
       "type": "Socket DBs",
       "image": "https://spexaelectrical.com/media/categories/Screenshot2025-07-27171743_1.png",
-      "category": "Plug & Sockets"
+      "category": "Plug & Sockets",
+      "modelPath": "/assets/3d/AnimatedRobot.glb"
     },
     {
       "id": 4,

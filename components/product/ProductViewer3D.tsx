@@ -37,43 +37,46 @@ const ProductViewer3D: React.FC<ProductViewer3DProps> = ({ modelPath, posterImag
   const [currentAnimation, setCurrentAnimation] = useState<string>("");
 
   useEffect(() => {
-    // Dynamically load model-viewer script
     const script = document.createElement('script');
     script.type = 'module';
     script.src = 'https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js';
+    script.addEventListener('load', () => {
+      const modelViewerEl = modelViewerRef.current;
+      if (modelViewerEl) {
+        modelViewerEl.addEventListener('load', () => {
+          if (modelViewerEl.availableAnimations) {
+            const animationNames = modelViewerEl.availableAnimations.map((anim: string) =>
+              anim.split('|')[1] || anim
+            );
+            setAnimations(animationNames);
+            setCurrentAnimation(animationNames[0]);
+          }
+        });
+      }
+    });
     document.body.appendChild(script);
 
-    // Copy the ref value at this point in time
-    const modelViewerEl = modelViewerRef.current;
-
-    // Event handler for when the model is fully loaded
-    const handleLoad = () => {
-      if (modelViewerEl && modelViewerEl.availableAnimations) {
-        setAnimations(modelViewerEl.availableAnimations);
-        setCurrentAnimation(modelViewerEl.availableAnimations[0]);
-      }
-    };
-
-    modelViewerEl?.addEventListener('load', handleLoad);
-
-    // Cleanup
     return () => {
       document.body.removeChild(script);
-      modelViewerEl?.removeEventListener('load', handleLoad);
+      const el = modelViewerRef.current;
+      if (el) {
+        el.removeEventListener('load', () => {});
+      }
     };
   }, []);
 
-  const handleAnimationChange = (animation: string) => {
+  const handleAnimationChange = (animationName: string) => {
     const model = modelViewerRef.current;
     if (model) {
-      model.animationName = animation;
+      const fullAnimationName = `RobotArmature|${animationName}`;
+      model.animationName = fullAnimationName;
       model.play();
-      setCurrentAnimation(animation);
+      setCurrentAnimation(animationName);
     }
   };
 
   return (
-    <div className="product-3d-viewer flex flex-col items-center space-y-4">
+    <div className="product-3d-viewer w-100">
       <model-viewer
         ref={modelViewerRef}
         src={modelPath}
@@ -94,19 +97,38 @@ const ProductViewer3D: React.FC<ProductViewer3DProps> = ({ modelPath, posterImag
         }}
       ></model-viewer>
 
+      {/* Styled Dropdown to Match Template */}
       {animations.length > 0 && (
-        <div className="flex space-x-2 flex-wrap justify-center">
-          {animations.map((anim) => (
-            <button
-              key={anim}
-              onClick={() => handleAnimationChange(anim)}
-              className={`px-4 py-2 rounded ${
-                currentAnimation === anim ? 'bg-blue-600 text-white' : 'bg-gray-200'
-              }`}
-            >
-              {anim}
-            </button>
-          ))}
+        <div className="mt-3">
+          <select
+            value={currentAnimation}
+            onChange={(e) => handleAnimationChange(e.target.value)}
+            className="form-select"
+            style={{
+              width: '100%',
+              padding: '8px 12px',
+              fontSize: '1rem',
+              borderRadius: '6px',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              backgroundColor: 'rgba(255, 255, 255, 0.08)',
+              color: '#ffffff',
+              WebkitAppearance: 'none', // Remove default arrow for custom styling if needed
+              appearance: 'none',
+            }}
+          >
+            <option value="" disabled style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+              Select animation...
+            </option>
+            {animations.map((anim) => (
+              <option
+                key={anim}
+                value={anim}
+                style={{ backgroundColor: 'rgba(0, 27, 43, 0.95)', color: '#ffffff' }}
+              >
+                {anim}
+              </option>
+            ))}
+          </select>
         </div>
       )}
     </div>
