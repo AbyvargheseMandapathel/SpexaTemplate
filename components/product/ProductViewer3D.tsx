@@ -34,7 +34,8 @@ declare global {
 const ProductViewer3D: React.FC<ProductViewer3DProps> = ({ modelPath, posterImage, alt }) => {
   const modelViewerRef = useRef<any>(null);
   const [animations, setAnimations] = useState<string[]>([]);
-  const [currentAnimation, setCurrentAnimation] = useState<string>("");
+  const [currentAnimation, setCurrentAnimation] = useState<string>('');
+  const [isPlaying, setIsPlaying] = useState<boolean>(true);
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -59,9 +60,7 @@ const ProductViewer3D: React.FC<ProductViewer3DProps> = ({ modelPath, posterImag
     return () => {
       document.body.removeChild(script);
       const el = modelViewerRef.current;
-      if (el) {
-        el.removeEventListener('load', () => {});
-      }
+      if (el) el.removeEventListener('load', () => {});
     };
   }, []);
 
@@ -72,6 +71,19 @@ const ProductViewer3D: React.FC<ProductViewer3DProps> = ({ modelPath, posterImag
       model.animationName = fullAnimationName;
       model.play();
       setCurrentAnimation(animationName);
+      setIsPlaying(true);
+    }
+  };
+
+  const handleTogglePlay = () => {
+    const model = modelViewerRef.current;
+    if (model) {
+      if (isPlaying) {
+        model.pause();
+      } else {
+        model.play();
+      }
+      setIsPlaying(!isPlaying);
     }
   };
 
@@ -97,9 +109,8 @@ const ProductViewer3D: React.FC<ProductViewer3DProps> = ({ modelPath, posterImag
         }}
       ></model-viewer>
 
-      {/* Styled Dropdown to Match Template */}
       {animations.length > 0 && (
-        <div className="mt-3">
+        <div className="mt-3 space-y-2">
           <select
             value={currentAnimation}
             onChange={(e) => handleAnimationChange(e.target.value)}
@@ -112,7 +123,7 @@ const ProductViewer3D: React.FC<ProductViewer3DProps> = ({ modelPath, posterImag
               border: '1px solid rgba(255, 255, 255, 0.2)',
               backgroundColor: 'rgba(255, 255, 255, 0.08)',
               color: '#ffffff',
-              WebkitAppearance: 'none', // Remove default arrow for custom styling if needed
+              WebkitAppearance: 'none',
               appearance: 'none',
             }}
           >
@@ -129,6 +140,25 @@ const ProductViewer3D: React.FC<ProductViewer3DProps> = ({ modelPath, posterImag
               </option>
             ))}
           </select>
+
+          {/* Pause/Play Button */}
+          <button
+            onClick={handleTogglePlay}
+            className="btn btn-primary w-100"
+            style={{
+              marginTop: '8px',
+              backgroundColor: isPlaying ? '#d9534f' : '#5cb85c',
+              border: 'none',
+              padding: '10px 12px',
+              borderRadius: '6px',
+              fontSize: '1rem',
+              color: '#fff',
+              cursor: 'pointer',
+              transition: 'background-color 0.2s ease',
+            }}
+          >
+            {isPlaying ? 'Pause Animation' : 'Play Animation'}
+          </button>
         </div>
       )}
     </div>
